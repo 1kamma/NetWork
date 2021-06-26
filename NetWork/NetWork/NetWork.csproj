@@ -5,11 +5,13 @@
     <TargetFramework>net5.0-windows7.0</TargetFramework>
     <ApplicationIcon />
     <StartupObject>NetWork.Program</StartupObject>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,7 +20,6 @@
     <PackageReference Include="Microsoft.Management.Infrastructure" Version="2.0.0" />
     <PackageReference Include="Microsoft.NETCore.Windows.ApiSets" Version="1.0.1" />
     <PackageReference Include="Microsoft.NETCore.Windows.ApiSets-x64" Version="1.0.0" />
-    <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.1.3" />
     <PackageReference Include="NAudio" Version="2.0.1" />
     <PackageReference Include="NETStandard.Library" Version="2.0.3" />
     <PackageReference Include="SimpleWifi.netstandard" Version="2.0.0" />
