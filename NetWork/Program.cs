@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.Management;
@@ -44,22 +44,30 @@ namespace NetWork
             else
             {
                 Process[] ids = Process.GetProcessesByName("mstsc");
-                foreach (var id in ids)
+                if (ids.Length < 1)
                 {
-                    bool started = false;
-                    ManagementObjectSearcher search = new($"SELECT CommandLine FROM Win32_Process WHERE ProcessId = {id.Id}");
-                    Regex rdp = new("(משרדוש.rdp|161.2)");
-                    foreach (var searchedObject in search.Get())
+                    StartProgram("rdp");
+                }
+                else
+                {
+                    foreach (var id in ids)
                     {
-                        if (rdp.Match(searchedObject["CommandLine"].ToString()).Success)
+                        bool started = false;
+                        ManagementObjectSearcher search = new($"SELECT CommandLine FROM Win32_Process WHERE ProcessId = {id.Id}");
+                        Regex rdp = new("(משרדוש.rdp|161.2)");
+                        foreach (var searchedObject in search.Get())
                         {
-                            started = true;
+                            if (rdp.Match(searchedObject["CommandLine"].ToString()).Success)
+                            {
+                                started = true;
+                            }
                         }
-                    }
-                    if (!started)
-                    {
-                        StartProgram("rdp");
-                    }
+                        if (!started)
+                        {
+                            StartProgram("rdp");
+                        }
+
+                }
                     Console.WriteLine("");
 
                 }
@@ -83,7 +91,12 @@ namespace NetWork
             }
             return false;
         }
-        public static string GetProgram(string Name)
+        /// <summary>
+        /// GetProgram switches between the name and the path of the file. if the name is given, it returns the path. if the path is given, it returns the name.
+        /// </summary>
+        /// <param name="NameOrPath">file or path of the program</param>
+        /// <returns>path if name has given, name if path has given. empty string if found nothing.</returns>
+        public static string GetProgram(string NameOrPath)
         {
             /*
             this function decides if the program is a name, or a location.
@@ -92,13 +105,13 @@ namespace NetWork
             otherwise, it returns empty string
             */
 
-            if (progs.ContainsKey(Name))
+            if (progs.ContainsKey(NameOrPath))
             {
-                return progs[Name];
+                return progs[NameOrPath];
             }
-            if (paths.ContainsKey(Name))
+            if (paths.ContainsKey(NameOrPath))
             {
-                return paths[Name];
+                return paths[NameOrPath];
             }
             return "";
 
@@ -135,12 +148,11 @@ namespace NetWork
         }
         public static void StartProgram(string[] Name, bool mute = false)
         {
-
             foreach (var process_name in Name)
             {
                 if (process_name.Contains("rdp") || process_name.Contains("mstsc"))
                 {
-                    Process.Start("mstsc.exe", "D:\\Drive\\מסמכים\\vms\\משרדוש.rdp");
+                    StopRDP(false);
                     continue;
                 }
                 else if (Process.GetProcessesByName(process_name).Length < 1)
@@ -176,15 +188,30 @@ namespace NetWork
 
             return goodWifi;
         }
+        static bool LanEthernet(System.Net.NetworkInformation.NetworkInterface networkAdapter)
+        {
+            if (networkAdapter.Name.Contains("Ethernet") || (networkAdapter.NetworkInterfaceType.ToString().Contains("Ethernet")))
+            {
+                return true;
+            }
+            return false;
+        }
+        static bool IgnoreLan(System.Net.NetworkInformation.NetworkInterface networkAdapter)
+        {
+            if (!(networkAdapter.Name.Contains("Bluetooth")) && (!(networkAdapter.Description.Contains("TAP"))) && (!(networkAdapter.Description.Contains("Hyper-V"))))
+            {
+                return true;
+            }
+            return false;
+        }
         static string GetLan(System.Net.NetworkInformation.NetworkInterface networkAdapter)
         {
-            if (networkAdapter.Name.Contains("Ethernet") && !(networkAdapter.Description.Contains("TAP")) && !(networkAdapter.Description.Contains("Hyper-V")))
+            if (LanEthernet(networkAdapter) && IgnoreLan(networkAdapter))
             {
                 return  networkAdapter.GetPhysicalAddress().ToString();
             }
             return null;
         }
-
         static bool GetVpn(System.Net.NetworkInformation.NetworkInterface net)
         {
             if (net.Name.Contains("Surfshark") || net.Name.Contains("shark") || net.Description.Contains("TAP"))
@@ -193,19 +220,28 @@ namespace NetWork
             }
             return false;
         }
-
         public static Dictionary<string, dynamic> GetNetwork()
         {
             Dictionary<string, dynamic> net_dict = new() { { "vpn", false }, { "lan", false }, { "good_lan", false }, { "ek", false } };
             System.Net.NetworkInformation.NetworkInterface[] nets = System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces();
             string getlan = "";
+            string? lannull;
             bool getgoodland = false;
             string getwifi;
             getwifi = GetWifiNetwork();
             foreach (var net in nets)
             {
+                if (net.Name == "ek")
+                {
+                    net_dict["ek"] |= true;
+                }
+
                 net_dict["vpn"] |= GetVpn(net);
-                getlan ??= GetLan(net);
+                lannull= GetLan(net);
+                if (lannull is not null)
+                {
+                    getlan = lannull;
+                }
                 if (AllowedMac(net.GetPhysicalAddress().ToString()))
                 {
                     getgoodland |= true ;
@@ -214,7 +250,10 @@ namespace NetWork
             }
             net_dict.Add("Wi-Fi", IsItGoodWifi(getwifi));
             net_dict["good_lan"]=getgoodland;
-            net_dict["lan"]= getlan;
+            if (getlan.Length > 0)
+            {
+                net_dict["lan"]= true;
+            }
         
             //net_dict.Add("good_lan", AllowedMac());
             return net_dict;
