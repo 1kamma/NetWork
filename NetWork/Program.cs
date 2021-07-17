@@ -6,12 +6,21 @@ using System.Text.RegularExpressions;
 using NAudio.CoreAudioApi;
 using SimpleWifi;
 using DotRas;
-
+using NLog;
 namespace NetWork
 {
     class Program
     {
-
+        public static Logger StartLogger()
+        {
+            var config = new NLog.Config.LoggingConfiguration();
+            var logfile = new NLog.Targets.FileTarget("lgfle") { FileName = "logme.txt" };
+            config.AddRule(LogLevel.Debug,LogLevel.Fatal,logfile);
+            NLog.LogManager.Configuration= config;
+            NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+            return logger;
+        }
+        public static Logger logger = StartLogger();
         public static string[] StringsOfPaths = System.IO.Directory.GetFiles(@"C:\Program Files\Google\Drive File Stream\", "GoogleDriveFS.exe", System.IO.SearchOption.AllDirectories);
         public static Dictionary<string, string> progs = new() { { "GoogleDriveFS", StringsOfPaths[^1] }, { "googledrivesync", @"C:\Program Files\Google\Drive\googledrivesync.exe" }, { "qbittorrent", @"C:\Program Files\qBittorrent\qbittorrent.exe" }, { "Surfshark", @"C:\Program Files (x86)\Surfshark\Surfshark.exe" } };
         public static Dictionary<string, string> paths = new() { { StringsOfPaths[^1], "GoogleDriveFS.exe" }, { @"C:\Program Files\Google\Drive\googledrivesync.exe", "googledrivesync.exe" }, { @"C:\Program Files\qBittorrent\qbittorrent.exe", "qbittorrent.exe" }, { @"C:\Program Files (x86)\Surfshark\Surfshark.exe", "Surfshark" } };
@@ -22,24 +31,20 @@ namespace NetWork
         /// <param name="stop">A bool parameter. it swiches between stopping (default) and starting rdp session.</param>
         public static void StopRDP(bool stop = true)
         {
+            
             if (stop)
             {
                 Process[] ids = Process.GetProcessesByName("mstsc");
                 foreach (var id in ids)
                 {
-
-                    ManagementObjectSearcher search = new($"SELECT CommandLine FROM Win32_Process WHERE ProcessId = {id.Id}");
+                    logger.Debug(id.MainWindowTitle);
                     Regex rdp = new("(משרדוש.rdp|161.2)");
-                    foreach (var searchedObject in search.Get())
+                    if (rdp.IsMatch(id.MainWindowTitle) || id.MainWindowTitle.Equals("חיבור לשולחן עבודה מרוחק"))
                     {
-                        if (rdp.Match(searchedObject["CommandLine"].ToString()).Success)
-                        {
-                            id.Kill();
-                        }
+                        id.Kill();
                     }
                     Console.WriteLine("");
                 }
-
             }
             else
             {
@@ -50,24 +55,21 @@ namespace NetWork
                 }
                 else
                 {
+                    bool started = false;
                     foreach (var id in ids)
                     {
-                        bool started = false;
-                        ManagementObjectSearcher search = new($"SELECT CommandLine FROM Win32_Process WHERE ProcessId = {id.Id}");
                         Regex rdp = new("(משרדוש.rdp|161.2)");
-                        foreach (var searchedObject in search.Get())
+                        logger.Debug(id.MainWindowTitle);
+                        if (rdp.IsMatch(id.MainWindowTitle) || id.MainWindowTitle.Equals("חיבור לשולחן עבודה מרוחק"))
                         {
-                            if (rdp.Match(searchedObject["CommandLine"].ToString()).Success)
-                            {
-                                started = true;
-                            }
-                        }
-                        if (!started)
-                        {
-                            StartProgram("rdp");
-                        }
+                            started = true;
+                        }                        
+                    }
+                    if (!started)
+                    {
+                        StartProgram("rdp");
+                    }
 
-                }
                     Console.WriteLine("");
 
                 }
@@ -349,22 +351,22 @@ namespace NetWork
             switch (HirarcyNetworks(network_connection))
             {
                 case "vpn":
-                    programs_to_run = new string[] { "googledrivesync", "GoogleDriveFS", "qbittorrent", "Surfshark" };
+                    programs_to_run = new string[] {  "GoogleDriveFS", "qbittorrent", "Surfshark" };
                     programs_to_stop = new string[] { "rdp" };
                     mute = false;
                     break;
                 case "ek":
-                    programs_to_run = new string[] { "rdp", "googledrivesync", "GoogleDriveFS" };
+                    programs_to_run = new string[] { "rdp",  "GoogleDriveFS" };
                     programs_to_stop = new string[] { "qbittorrent", "Surfshark" };
                     mute = false;
                     break;
                 case "good_lan":
-                    programs_to_run = new string[] { "googledrivesync", "GoogleDriveFS", "qbittorrent", "Surfshark" };
+                    programs_to_run = new string[] {  "GoogleDriveFS", "qbittorrent", "Surfshark" };
                     programs_to_stop = new string[] { "rdp" };
                     mute = false;
                     break;
                 case "lan":
-                    programs_to_run = new string[] { "rdp", "googledrivesync", "GoogleDriveFS" };
+                    programs_to_run = new string[] { "rdp",  "GoogleDriveFS" };
                     programs_to_stop = new string[] { "qbittorrent", "Surfshark" };
                     mute = false;
                     Dial(true);
@@ -372,15 +374,15 @@ namespace NetWork
                 default:
                     if (network_connection["Wi-Fi"])
                     {
-                        programs_to_run = new string[] { "googledrivesync", "GoogleDriveFS", "qbittorrent", "Surfshark" };
+                        programs_to_run = new string[] {  "GoogleDriveFS", "qbittorrent", "Surfshark" };
                         programs_to_stop = new string[] { "rdp" };
                         mute = false;
                         break;
                     }
                     else
                     {
-                        programs_to_run = new string[] { "googledrivesync", "GoogleDriveFS" };
-                        programs_to_stop = new string[] { "qbittorrent", "Surfshark" };
+                        programs_to_run = new string[] { "GoogleDriveFS" };
+                        programs_to_stop = new string[] { "qbittorrent", "Surfshark","rdp" };
                         mute = true;
                     }
                     break;
@@ -397,6 +399,7 @@ namespace NetWork
         }
         static void Main(string[] args)
         {
+            logger.Debug("me");
             DoTheSchtik();
             
         }

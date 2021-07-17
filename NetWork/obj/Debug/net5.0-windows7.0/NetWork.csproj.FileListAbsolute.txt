@@ -205,3 +205,13 @@ C:\Users\סארט\source\repos\NetWork\NetWork\obj\Debug\net5.0-windows7.0\ref\N
 C:\Users\סארט\source\repos\NetWork\NetWork\obj\Debug\net5.0-windows7.0\NetWork.genruntimeconfig.cache
 C:\Users\סארט\source\repos\NetWork\NetWork\bin\Debug\net5.0-windows7.0\SimpleWifi.dll
 C:\Users\סארט\source\repos\NetWork\NetWork\bin\Debug\net5.0-windows7.0\DotRas.dll
+C:\Users\סארט\source\repos\NetWork\NetWork\bin\Debug\net5.0-windows7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\סארט\source\repos\NetWork\NetWork\bin\Debug\net5.0-windows7.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\סארט\source\repos\NetWork\NetWork\bin\Debug\net5.0-windows7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\סארט\source\repos\NetWork\NetWork\bin\Debug\net5.0-windows7.0\Microsoft.Extensions.Logging.dll
+C:\Users\סארט\source\repos\NetWork\NetWork\bin\Debug\net5.0-windows7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\סארט\source\repos\NetWork\NetWork\bin\Debug\net5.0-windows7.0\Microsoft.Extensions.Options.dll
+C:\Users\סארט\source\repos\NetWork\NetWork\bin\Debug\net5.0-windows7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\סארט\source\repos\NetWork\NetWork\bin\Debug\net5.0-windows7.0\NLog.dll
+C:\Users\סארט\source\repos\NetWork\NetWork\bin\Debug\net5.0-windows7.0\NLog.Extensions.Logging.dll
+C:\Users\סארט\source\repos\NetWork\NetWork\bin\Debug\net5.0-windows7.0\Serilog.dll
