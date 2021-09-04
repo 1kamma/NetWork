@@ -1,12 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.Collections.Generic;
-using System.Management;
-using System.Text.RegularExpressions;
-using NAudio.CoreAudioApi;
-using SimpleWifi;
 using DotRas;
+using NAudio.CoreAudioApi;
 using NLog;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text.RegularExpressions;
+
 namespace NetWork
 {
     class Program
@@ -15,15 +15,18 @@ namespace NetWork
         {
             var config = new NLog.Config.LoggingConfiguration();
             var logfile = new NLog.Targets.FileTarget("lgfle") { FileName = "logme.txt" };
-            config.AddRule(LogLevel.Debug,LogLevel.Fatal,logfile);
-            NLog.LogManager.Configuration= config;
+            config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
+            NLog.LogManager.Configuration = config;
             NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
             return logger;
         }
         public static Logger logger = StartLogger();
+        /// <summary>
+        /// String of paths
+        /// </summary>
         public static string[] StringsOfPaths = System.IO.Directory.GetFiles(@"C:\Program Files\Google\Drive File Stream\", "GoogleDriveFS.exe", System.IO.SearchOption.AllDirectories);
-        public static Dictionary<string, string> progs = new() { { "GoogleDriveFS", StringsOfPaths[^1] }, { "googledrivesync", @"C:\Program Files\Google\Drive\googledrivesync.exe" }, { "qbittorrent", @"C:\Program Files\qBittorrent\qbittorrent.exe" }, { "Surfshark", @"C:\Program Files (x86)\Surfshark\Surfshark.exe" } };
-        public static Dictionary<string, string> paths = new() { { StringsOfPaths[^1], "GoogleDriveFS.exe" }, { @"C:\Program Files\Google\Drive\googledrivesync.exe", "googledrivesync.exe" }, { @"C:\Program Files\qBittorrent\qbittorrent.exe", "qbittorrent.exe" }, { @"C:\Program Files (x86)\Surfshark\Surfshark.exe", "Surfshark" } };
+        public static Dictionary<string, string> progs = new() { { "GoogleDriveFS", StringsOfPaths[^1] }, { "qbittorrent", @"C:\Program Files\qBittorrent\qbittorrent.exe" }, { "Surfshark", @"C:\Program Files (x86)\Surfshark\Surfshark.exe" }, { "cmd", @"C:\Windows\System32\cmd.exe" } };
+        public static Dictionary<string, string> paths = new() { { StringsOfPaths[^1], "GoogleDriveFS.exe" }, { @"C:\Program Files\qBittorrent\qbittorrent.exe", "qbittorrent.exe" }, { @"C:\Program Files (x86)\Surfshark\Surfshark.exe", "Surfshark" }, { @"C:\Windows\System32\cmd.exe", "cmd" } };
         //public static string[,] progs = new string[2,5] { { "GoogleDriveFS.exe", "googledrivesync.exe", "qbittorrent.exe", "Surfshark.exe", "mstsc.exe" },{ StringsOfPaths[StringsOfPaths.Length-1], "C:\\Program Files\\Google\\Drive\\googledrivesync.exe", "C:\\Program Files\\qBittorrent\\qbittorrent.exe", "C:\\Program Files (x86)\\Surfshark\\Surfshark.exe" , "mstsc.exe" } };
         /// <summary>
         /// This Function Stops the RDP connection to the office computer. it takes 'stop' parameter. if it is true, it stops the rdp. otherwise, it starts it.
@@ -31,7 +34,7 @@ namespace NetWork
         /// <param name="stop">A bool parameter. it swiches between stopping (default) and starting rdp session.</param>
         public static void StopRDP(bool stop = true)
         {
-            
+
             if (stop)
             {
                 Process[] ids = Process.GetProcessesByName("mstsc");
@@ -63,7 +66,7 @@ namespace NetWork
                         if (rdp.IsMatch(id.MainWindowTitle) || id.MainWindowTitle.Equals("חיבור לשולחן עבודה מרוחק"))
                         {
                             started = true;
-                        }                        
+                        }
                     }
                     if (!started)
                     {
@@ -76,7 +79,7 @@ namespace NetWork
             }
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="connect"></param>
         /// <returns></returns>
@@ -86,7 +89,7 @@ namespace NetWork
             {
                 RasDialer rasDialer = new();
                 rasDialer.AllowUseStoredCredentials = true;
-                rasDialer.PhoneBookPath = @"C:\Users\סארט\AppData\Roaming\Microsoft\Network\Connections\Pbk\ek.pbk";
+                rasDialer.PhoneBookPath = @"D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\Other\ek.pbk";
                 rasDialer.PhoneNumber = "ek";
                 rasDialer.EntryName = "ek";
                 rasDialer.DialAsync();
@@ -118,13 +121,26 @@ namespace NetWork
             return "";
 
         }
+        public static void StopSurfshark()
+        {
+            Process.GetProcesses()
+                     .Where(x => x.ProcessName.StartsWith("surf", StringComparison.OrdinalIgnoreCase))
+                     .ToList()
+                     .ForEach(x => x.Kill());
+
+        }
         public static void StopProgram(string[] Name, bool mute = true)
         {
             foreach (string name in Name)
             {
                 try
                 {
-                    if (progs.ContainsKey(name))
+                    System.Text.RegularExpressions.Regex vpnRegEx = new(@"[Ss][Uu][Rr][Ff][Ss][Hh][Aa][Rr][Kk]");
+                    if (vpnRegEx.IsMatch(name))
+                    {
+                        StopSurfshark();
+                    }
+                    else if (progs.ContainsKey(name))
                     {
                         Process[] p = Process.GetProcessesByName(name);
                         foreach (Process proc in p)
@@ -180,13 +196,24 @@ namespace NetWork
         public static string GetWifiNetwork()
         {
             SimpleWifi.Win32.WlanClient wlan = new();
-            return wlan.Interfaces[0].CurrentConnection.profileName;
+            string wifiname;
+            try
+            {
+                wifiname = wlan.Interfaces[0].CurrentConnection.profileName;
+
+            }
+            catch
+            {
+                wifiname = "";
+            }
+            return wifiname;
+
         }
         public static bool? IsItGoodWifi(string currentWifi)
         {
             Regex regex = new(currentWifi);
             bool? goodWifi;
-            goodWifi = regex.IsMatch("Oliver Oliver5 Oliver x018_497622 TNCAPE5A34D MSBR Azrieli_Modiin_WIFI lu shalmata mickey Mickey Network 192.168.1. Silmarill wintunshark0 saret Saret huji-meonot") ? true : (regex.IsMatch("HUJI-netXeduroam HUJI-guest 132.64") ? false:null);
+            goodWifi = regex.IsMatch("Oliver Oliver5 Oliver x018_497622 TNCAPE5A34D MSBR Azrieli_Modiin_WIFI lu shalmata mickey Mickey Network 192.168.1. Silmarill wintunshark0 saret Saret huji-meonot") ? true : (regex.IsMatch("HUJI-netX eduroam HUJI-guest 132.64") ? false : null);
 
             return goodWifi;
         }
@@ -210,7 +237,7 @@ namespace NetWork
         {
             if (LanEthernet(networkAdapter) && IgnoreLan(networkAdapter))
             {
-                return  networkAdapter.GetPhysicalAddress().ToString();
+                return networkAdapter.GetPhysicalAddress().ToString();
             }
             return null;
         }
@@ -229,7 +256,7 @@ namespace NetWork
             string getlan = "";
             string? lannull;
             bool getgoodland = false;
-            string getwifi;
+            string? getwifi;
             getwifi = GetWifiNetwork();
             foreach (var net in nets)
             {
@@ -239,24 +266,24 @@ namespace NetWork
                 }
 
                 net_dict["vpn"] |= GetVpn(net);
-                lannull= GetLan(net);
+                lannull = GetLan(net);
                 if (lannull is not null)
                 {
                     getlan = lannull;
                 }
                 if (AllowedMac(net.GetPhysicalAddress().ToString()))
                 {
-                    getgoodland |= true ;
+                    getgoodland |= true;
                 }
 
             }
             net_dict.Add("Wi-Fi", IsItGoodWifi(getwifi));
-            net_dict["good_lan"]=getgoodland;
+            net_dict["good_lan"] = getgoodland;
             if (getlan.Length > 0)
             {
-                net_dict["lan"]= true;
+                net_dict["lan"] = true;
             }
-        
+
             //net_dict.Add("good_lan", AllowedMac());
             return net_dict;
         }
@@ -351,22 +378,22 @@ namespace NetWork
             switch (HirarcyNetworks(network_connection))
             {
                 case "vpn":
-                    programs_to_run = new string[] {  "GoogleDriveFS", "qbittorrent", "Surfshark" };
+                    programs_to_run = new string[] { "GoogleDriveFS", "qbittorrent", "Surfshark" };
                     programs_to_stop = new string[] { "rdp" };
                     mute = false;
                     break;
                 case "ek":
-                    programs_to_run = new string[] { "rdp",  "GoogleDriveFS" };
+                    programs_to_run = new string[] { "rdp", "GoogleDriveFS" };
                     programs_to_stop = new string[] { "qbittorrent", "Surfshark" };
                     mute = false;
                     break;
                 case "good_lan":
-                    programs_to_run = new string[] {  "GoogleDriveFS", "qbittorrent", "Surfshark" };
+                    programs_to_run = new string[] { "GoogleDriveFS", "qbittorrent", "Surfshark" };
                     programs_to_stop = new string[] { "rdp" };
                     mute = false;
                     break;
                 case "lan":
-                    programs_to_run = new string[] { "rdp",  "GoogleDriveFS" };
+                    programs_to_run = new string[] { "rdp", "GoogleDriveFS" };
                     programs_to_stop = new string[] { "qbittorrent", "Surfshark" };
                     mute = false;
                     Dial(true);
@@ -374,7 +401,7 @@ namespace NetWork
                 default:
                     if (network_connection["Wi-Fi"])
                     {
-                        programs_to_run = new string[] {  "GoogleDriveFS", "qbittorrent", "Surfshark" };
+                        programs_to_run = new string[] { "GoogleDriveFS", "qbittorrent", "Surfshark" };
                         programs_to_stop = new string[] { "rdp" };
                         mute = false;
                         break;
@@ -382,18 +409,21 @@ namespace NetWork
                     else
                     {
                         programs_to_run = new string[] { "GoogleDriveFS" };
-                        programs_to_stop = new string[] { "qbittorrent", "Surfshark","rdp" };
+                        programs_to_stop = new string[] { "qbittorrent", "Surfshark", "rdp" };
                         mute = true;
                     }
                     break;
             }
+
             if (programs_to_run is not null)
             {
                 StartProgram(programs_to_run, mute);
+                MuteSystem(mute);
             }
             if (programs_to_stop is not null)
             {
                 StopProgram(programs_to_stop, mute);
+                MuteSystem(mute);
             }
             System.Windows.Forms.Application.Exit();
         }
@@ -401,7 +431,7 @@ namespace NetWork
         {
             logger.Debug("me");
             DoTheSchtik();
-            
+
         }
     }
 }

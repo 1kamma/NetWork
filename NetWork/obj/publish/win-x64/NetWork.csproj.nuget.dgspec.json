@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\NetWork.csproj": {}
+    "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\NetWork.csproj": {}
   },
   "projects": {
-    "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\NetWork.csproj": {
+    "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\NetWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\NetWork.csproj",
+        "projectUniqueName": "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\NetWork.csproj",
         "projectName": "NetWork",
-        "projectPath": "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\NetWork.csproj",
+        "projectPath": "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\NetWork.csproj",
         "packagesPath": "C:\\Users\\סארט\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\obj\\publish\\win-x64\\",
+        "outputPath": "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\obj\\publish\\win-x64\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\סארט\\source\\repos\\NetWork": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,10 +48,6 @@
               "target": "Package",
               "version": "[1.0.1, )"
             },
-            "DotRas.for.Win8": {
-              "target": "Package",
-              "version": "[1.3.0, )"
-            },
             "Microsoft.Management.Infrastructure": {
               "target": "Package",
               "version": "[2.0.0, )"
@@ -73,6 +68,18 @@
               "target": "Package",
               "version": "[2.0.3, )"
             },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.10, )"
+            },
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[1.7.3, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
             "SimpleWifi.netstandard": {
               "target": "Package",
               "version": "[2.0.0, )"
@@ -80,6 +87,10 @@
             "System.Management": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "VPNConnector": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [
@@ -95,15 +106,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[5.0.7, 5.0.7]"
+              "version": "[5.0.8, 5.0.8]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[5.0.7, 5.0.7]"
+              "version": "[5.0.8, 5.0.8]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[5.0.7, 5.0.7]"
+              "version": "[5.0.8, 5.0.8]"
             }
           ],
           "frameworkReferences": {
@@ -111,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

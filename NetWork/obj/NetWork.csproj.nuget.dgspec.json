@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\NetWork.csproj": {}
+    "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\NetWork.csproj": {}
   },
   "projects": {
-    "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\NetWork.csproj": {
+    "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\NetWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\NetWork.csproj",
+        "projectUniqueName": "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\NetWork.csproj",
         "projectName": "NetWork",
-        "projectPath": "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\NetWork.csproj",
+        "projectPath": "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\NetWork.csproj",
         "packagesPath": "C:\\Users\\סארט\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\obj\\",
+        "outputPath": "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\סארט\\source\\repos\\NetWork": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,10 +47,6 @@
             "AudioControl.x64": {
               "target": "Package",
               "version": "[1.0.1, )"
-            },
-            "DotRas.for.Win8": {
-              "target": "Package",
-              "version": "[1.3.0, )"
             },
             "Microsoft.Management.Infrastructure": {
               "target": "Package",
@@ -92,6 +87,10 @@
             "System.Management": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "VPNConnector": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [
@@ -104,12 +103,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.8, 5.0.8]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
         }
       }
     }

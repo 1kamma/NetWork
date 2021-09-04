@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Windows.Common",
+    "\\Windows.Common\\obj",
+    "\\Windows.Common\\obj\\Release",
+    "\\Windows.Common\\Properties",
+    "\\Windows.Common\\Wifi"
   ],
-  "SelectedNode": "\\NetWork.sln",
+  "SelectedNode": "\\Windows.Common\\Wifi\\Interop.cs",
   "PreviewInSolutionExplorer": false
 }

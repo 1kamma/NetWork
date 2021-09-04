@@ -1193,6 +1193,18 @@
             "rid": "win"
           }
         }
+      },
+      "VPNConnector/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "DotRas.for.Win8": "1.3.0"
+        },
+        "compile": {
+          "lib/net452/VPNConnector.dll": {}
+        },
+        "runtime": {
+          "lib/net452/VPNConnector.dll": {}
+        }
       }
     }
   },
@@ -2199,12 +2211,23 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "VPNConnector/1.0.0": {
+      "sha512": "JI8OnCYcrkZ4tB9YTfTBDizCky40A+Xoti+/t/IDuYG9wXyI1/TfkEDA7v17ptybsNKSvtLyyT+HTWW/Bco80Q==",
+      "type": "package",
+      "path": "vpnconnector/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/VPNConnector.dll",
+        "vpnconnector.1.0.0.nupkg.sha512",
+        "vpnconnector.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
       "AudioControl.x64 >= 1.0.1",
-      "DotRas.for.Win8 >= 1.3.0",
       "Microsoft.Management.Infrastructure >= 2.0.0",
       "Microsoft.NETCore.Windows.ApiSets >= 1.0.1",
       "Microsoft.NETCore.Windows.ApiSets-x64 >= 1.0.0",
@@ -2214,7 +2237,8 @@
       "NLog.Extensions.Logging >= 1.7.3",
       "Serilog >= 2.10.0",
       "SimpleWifi.netstandard >= 2.0.0",
-      "System.Management >= 5.0.0"
+      "System.Management >= 5.0.0",
+      "VPNConnector >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2224,11 +2248,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\NetWork.csproj",
+      "projectUniqueName": "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\NetWork.csproj",
       "projectName": "NetWork",
-      "projectPath": "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\NetWork.csproj",
+      "projectPath": "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\NetWork.csproj",
       "packagesPath": "C:\\Users\\סארט\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\סארט\\source\\repos\\NetWork\\NetWork\\obj\\",
+      "outputPath": "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2243,7 +2267,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\סארט\\source\\repos\\NetWork": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2265,10 +2288,6 @@
           "AudioControl.x64": {
             "target": "Package",
             "version": "[1.0.1, )"
-          },
-          "DotRas.for.Win8": {
-            "target": "Package",
-            "version": "[1.3.0, )"
           },
           "Microsoft.Management.Infrastructure": {
             "target": "Package",
@@ -2309,6 +2328,10 @@
           "System.Management": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "VPNConnector": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [
@@ -2321,12 +2344,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.8, 5.0.8]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -2337,6 +2366,16 @@
       "warningLevel": 1,
       "message": "Package 'DotRas.for.Win8 1.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "DotRas.for.Win8",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'VPNConnector 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "VPNConnector",
       "targetGraphs": [
         "net5.0-windows7.0"
       ]
