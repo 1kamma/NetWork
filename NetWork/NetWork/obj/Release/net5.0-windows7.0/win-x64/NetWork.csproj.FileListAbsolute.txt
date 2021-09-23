@@ -521,3 +521,21 @@ C:\Users\סארט\source\repos\NetWork\NetWork\obj\Release\net5.0-windows7.0\win
 C:\Users\סארט\source\repos\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\ref\NetWork.dll
 C:\Users\סארט\source\repos\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\NetWork.pdb
 C:\Users\סארט\source\repos\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\NetWork.genruntimeconfig.cache
+D:\Neutral Folder\NetWorkAutomation\net5.0-windows7.0\win-x64\AudioControlNative.dll
+D:\Neutral Folder\NetWorkAutomation\net5.0-windows7.0\win-x64\NetWork.exe
+D:\Neutral Folder\NetWorkAutomation\net5.0-windows7.0\win-x64\NetWork.deps.json
+D:\Neutral Folder\NetWorkAutomation\net5.0-windows7.0\win-x64\NetWork.runtimeconfig.json
+D:\Neutral Folder\NetWorkAutomation\net5.0-windows7.0\win-x64\NetWork.runtimeconfig.dev.json
+D:\Neutral Folder\NetWorkAutomation\net5.0-windows7.0\win-x64\NetWork.dll
+D:\Neutral Folder\NetWorkAutomation\net5.0-windows7.0\win-x64\ref\NetWork.dll
+D:\Neutral Folder\NetWorkAutomation\net5.0-windows7.0\win-x64\NetWork.xml
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\NetWork.Properties.Resources.resources
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\NetWork.csproj.GenerateResource.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\NetWork.GeneratedMSBuildEditorConfig.editorconfig
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\NetWork.AssemblyInfoInputs.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\NetWork.AssemblyInfo.cs
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\NetWork.csproj.CoreCompileInputs.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\NetWork.csproj.CopyComplete
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\NetWork.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\ref\NetWork.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Release\net5.0-windows7.0\win-x64\NetWork.genruntimeconfig.cache

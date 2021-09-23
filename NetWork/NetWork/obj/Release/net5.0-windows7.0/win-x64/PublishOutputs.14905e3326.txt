@@ -1,4 +1,3 @@
-D:\Neutral Folder\NetWorkAutomation\NetWork.pdb
 D:\Neutral Folder\NetWorkAutomation\AudioControlNative.dll
 D:\Neutral Folder\NetWorkAutomation\clrcompression.dll
 D:\Neutral Folder\NetWorkAutomation\clrjit.dll
@@ -9,4 +8,5 @@ D:\Neutral Folder\NetWorkAutomation\PenImc_cor3.dll
 D:\Neutral Folder\NetWorkAutomation\PresentationNative_cor3.dll
 D:\Neutral Folder\NetWorkAutomation\vcruntime140_cor3.dll
 D:\Neutral Folder\NetWorkAutomation\wpfgfx_cor3.dll
+D:\Neutral Folder\NetWorkAutomation\NetWork.xml
 D:\Neutral Folder\NetWorkAutomation\NetWork.exe

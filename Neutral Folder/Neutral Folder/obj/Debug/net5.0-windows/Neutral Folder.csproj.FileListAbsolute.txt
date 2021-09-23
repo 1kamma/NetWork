@@ -1,0 +1,22 @@
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0-windows\Neutral Folder.exe
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0-windows\Neutral Folder.deps.json
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0-windows\Neutral Folder.runtimeconfig.json
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0-windows\Neutral Folder.runtimeconfig.dev.json
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0-windows\Neutral Folder.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0-windows\ref\Neutral Folder.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0-windows\Neutral Folder.pdb
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Neutral Folder.csproj.AssemblyReference.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Interop.TaskScheduler.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Neutral Folder.csproj.ResolveComReference.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Neutral_Folder.Properties.Resources.resources
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Neutral Folder.csproj.GenerateResource.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Neutral Folder.GeneratedMSBuildEditorConfig.editorconfig
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Neutral Folder.AssemblyInfoInputs.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Neutral Folder.AssemblyInfo.cs
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Neutral Folder.csproj.CoreCompileInputs.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Neutral Folder.csproj.CopyComplete
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Neutral Folder.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\ref\Neutral Folder.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Neutral Folder.pdb
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0-windows\Neutral Folder.genruntimeconfig.cache

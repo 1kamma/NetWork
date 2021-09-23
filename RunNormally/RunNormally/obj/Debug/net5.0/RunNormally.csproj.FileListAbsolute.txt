@@ -1,0 +1,39 @@
+C:\Users\סארט\source\repos\RunNormally\RunNormally\bin\Debug\net5.0\RunNormally.exe
+C:\Users\סארט\source\repos\RunNormally\RunNormally\bin\Debug\net5.0\RunNormally.deps.json
+C:\Users\סארט\source\repos\RunNormally\RunNormally\bin\Debug\net5.0\RunNormally.runtimeconfig.json
+C:\Users\סארט\source\repos\RunNormally\RunNormally\bin\Debug\net5.0\RunNormally.runtimeconfig.dev.json
+C:\Users\סארט\source\repos\RunNormally\RunNormally\bin\Debug\net5.0\RunNormally.dll
+C:\Users\סארט\source\repos\RunNormally\RunNormally\bin\Debug\net5.0\ref\RunNormally.dll
+C:\Users\סארט\source\repos\RunNormally\RunNormally\bin\Debug\net5.0\RunNormally.pdb
+C:\Users\סארט\source\repos\RunNormally\RunNormally\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\סארט\source\repos\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.csproj.AssemblyReference.cache
+C:\Users\סארט\source\repos\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.Properties.Resources.resources
+C:\Users\סארט\source\repos\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.csproj.GenerateResource.cache
+C:\Users\סארט\source\repos\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\סארט\source\repos\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.AssemblyInfoInputs.cache
+C:\Users\סארט\source\repos\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.AssemblyInfo.cs
+C:\Users\סארט\source\repos\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.csproj.CoreCompileInputs.cache
+C:\Users\סארט\source\repos\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.csproj.CopyComplete
+C:\Users\סארט\source\repos\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.dll
+C:\Users\סארט\source\repos\RunNormally\RunNormally\obj\Debug\net5.0\ref\RunNormally.dll
+C:\Users\סארט\source\repos\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.pdb
+C:\Users\סארט\source\repos\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.genruntimeconfig.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\bin\Debug\net5.0\RunNormally.exe
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\bin\Debug\net5.0\RunNormally.deps.json
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\bin\Debug\net5.0\RunNormally.runtimeconfig.json
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\bin\Debug\net5.0\RunNormally.runtimeconfig.dev.json
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\bin\Debug\net5.0\RunNormally.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\bin\Debug\net5.0\ref\RunNormally.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\bin\Debug\net5.0\RunNormally.pdb
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.Properties.Resources.resources
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.csproj.GenerateResource.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.GeneratedMSBuildEditorConfig.editorconfig
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.AssemblyInfoInputs.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.AssemblyInfo.cs
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.csproj.CoreCompileInputs.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\obj\Debug\net5.0\ref\RunNormally.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.pdb
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.genruntimeconfig.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\RunNormally\RunNormally\obj\Debug\net5.0\RunNormally.csproj.CopyComplete

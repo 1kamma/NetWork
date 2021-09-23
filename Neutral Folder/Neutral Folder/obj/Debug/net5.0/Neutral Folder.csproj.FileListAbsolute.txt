@@ -1,0 +1,53 @@
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Neutral Folder.exe
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Neutral Folder.deps.json
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Neutral Folder.runtimeconfig.json
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Neutral Folder.runtimeconfig.dev.json
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Neutral Folder.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\ref\Neutral Folder.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Neutral Folder.pdb
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.csproj.AssemblyReference.cache
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.AssemblyInfoInputs.cache
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.AssemblyInfo.cs
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.csproj.CoreCompileInputs.cache
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.csproj.CopyComplete
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\ref\Neutral Folder.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.pdb
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.genruntimeconfig.cache
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\System.Diagnostics.EventLog.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Microsoft.Win32.TaskScheduler.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\de\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\es\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\fr\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\it\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\pl\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\ru\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.EventLog.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Interop.TaskScheduler.dll
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.csproj.ResolveComReference.cache
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral_Folder.Properties.Resources.resources
+C:\Users\סארט\source\repos\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.csproj.GenerateResource.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\ref\Neutral Folder.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.pdb
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Neutral Folder.exe
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Neutral Folder.deps.json
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Neutral Folder.runtimeconfig.json
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Neutral Folder.runtimeconfig.dev.json
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Neutral Folder.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0\ref\Neutral Folder.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Neutral Folder.pdb
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Interop.TaskScheduler.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.csproj.ResolveComReference.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral_Folder.Properties.Resources.resources
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.csproj.GenerateResource.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.GeneratedMSBuildEditorConfig.editorconfig
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.AssemblyInfoInputs.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.AssemblyInfo.cs
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.csproj.CoreCompileInputs.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.genruntimeconfig.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Neutral Folder\Neutral Folder\obj\Debug\net5.0\Neutral Folder.csproj.AssemblyReference.cache

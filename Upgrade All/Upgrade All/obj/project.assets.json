@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Cake.Chocolatey.Module/0.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Cake.Chocolatey.Module.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Cake.Chocolatey.Module.dll": {}
+        }
+      },
+      "chocolatey/0.10.14": {
+        "type": "package"
+      },
+      "chocolatey.lib/0.10.15": {
+        "type": "package",
+        "dependencies": {
+          "log4net": "2.0.3"
+        },
+        "compile": {
+          "lib/chocolatey.dll": {}
+        },
+        "runtime": {
+          "lib/chocolatey.dll": {}
+        }
+      },
+      "instchoco/2.11.0": {
+        "type": "package"
+      },
+      "log4net/2.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net40-full/log4net.dll": {}
+        },
+        "runtime": {
+          "lib/net40-full/log4net.dll": {}
+        }
+      },
+      "NLog/4.7.10": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Cake.Chocolatey.Module/0.6.1": {
+      "sha512": "YOeV9X5LkEgHkEfs8wb+ts1X8N4x8ZXU4nqm2BvXCovf9jSibP5fiM/6uSoKh5UwUlk4w2puHgvPDxwQpR1FdA==",
+      "type": "package",
+      "path": "cake.chocolatey.module/0.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cake.chocolatey.module.0.6.1.nupkg.sha512",
+        "cake.chocolatey.module.nuspec",
+        "lib/netstandard2.0/Cake.Chocolatey.Module.dll",
+        "lib/netstandard2.0/Cake.Chocolatey.Module.pdb",
+        "lib/netstandard2.0/Cake.Chocolatey.Module.xml"
+      ]
+    },
+    "chocolatey/0.10.14": {
+      "sha512": "CgNVoZFzJ9eHaAvVMBsVLYe8PKxEnOCR4vpspOlAqeBHw1JfzFnIeX/ztk6LCEkdZ1xTYLcoXG/2hvDbwBB2vQ==",
+      "type": "package",
+      "path": "chocolatey/0.10.14",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "chocolatey.0.10.14.nupkg.sha512",
+        "chocolatey.nuspec",
+        "tools/VERIFICATION.txt",
+        "tools/chocolateyInstall.ps1",
+        "tools/chocolateyInstall/CREDITS.txt",
+        "tools/chocolateyInstall/LICENSE.txt",
+        "tools/chocolateyInstall/choco.exe",
+        "tools/chocolateyInstall/choco.exe.ignore",
+        "tools/chocolateyInstall/choco.exe.manifest",
+        "tools/chocolateyInstall/helpers/ChocolateyTabExpansion.ps1",
+        "tools/chocolateyInstall/helpers/chocolateyInstaller.psm1",
+        "tools/chocolateyInstall/helpers/chocolateyProfile.psm1",
+        "tools/chocolateyInstall/helpers/chocolateyScriptRunner.ps1",
+        "tools/chocolateyInstall/helpers/functions/Format-FileSize.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-CheckSumValid.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-ChocolateyUnzip.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-ChocolateyWebFile.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-EnvironmentVariable.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-EnvironmentVariableNames.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-FtpFile.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-OSArchitectureWidth.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-PackageParameters.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-ToolsLocation.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-UACEnabled.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-UninstallRegistryKey.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-VirusCheckValid.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-WebFile.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-WebFileName.ps1",
+        "tools/chocolateyInstall/helpers/functions/Get-WebHeaders.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-BinFile.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-ChocolateyDesktopLink.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-ChocolateyEnvironmentVariable.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-ChocolateyExplorerMenuItem.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-ChocolateyFileAssociation.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-ChocolateyInstallPackage.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-ChocolateyPackage.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-ChocolateyPath.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-ChocolateyPinnedTaskBarItem.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-ChocolateyPowershellCommand.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-ChocolateyShortcut.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-ChocolateyVsixPackage.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-ChocolateyZipPackage.ps1",
+        "tools/chocolateyInstall/helpers/functions/Install-Vsix.ps1",
+        "tools/chocolateyInstall/helpers/functions/Set-EnvironmentVariable.ps1",
+        "tools/chocolateyInstall/helpers/functions/Set-PowerShellExitCode.ps1",
+        "tools/chocolateyInstall/helpers/functions/Start-ChocolateyProcessAsAdmin.ps1",
+        "tools/chocolateyInstall/helpers/functions/Test-ProcessAdminRights.ps1",
+        "tools/chocolateyInstall/helpers/functions/UnInstall-ChocolateyZipPackage.ps1",
+        "tools/chocolateyInstall/helpers/functions/Uninstall-BinFile.ps1",
+        "tools/chocolateyInstall/helpers/functions/Uninstall-ChocolateyEnvironmentVariable.ps1",
+        "tools/chocolateyInstall/helpers/functions/Uninstall-ChocolateyPackage.ps1",
+        "tools/chocolateyInstall/helpers/functions/Update-SessionEnvironment.ps1",
+        "tools/chocolateyInstall/helpers/functions/Write-ChocolateyFailure.ps1",
+        "tools/chocolateyInstall/helpers/functions/Write-ChocolateySuccess.ps1",
+        "tools/chocolateyInstall/helpers/functions/Write-FileUpdateLog.ps1",
+        "tools/chocolateyInstall/helpers/functions/Write-FunctionCallLogMessage.ps1",
+        "tools/chocolateyInstall/redirects/RefreshEnv.cmd",
+        "tools/chocolateyInstall/redirects/choco.exe",
+        "tools/chocolateyInstall/redirects/choco.exe.ignore",
+        "tools/chocolateyInstall/redirects/chocolatey.exe",
+        "tools/chocolateyInstall/redirects/chocolatey.exe.ignore",
+        "tools/chocolateyInstall/redirects/cinst.exe",
+        "tools/chocolateyInstall/redirects/cinst.exe.ignore",
+        "tools/chocolateyInstall/redirects/clist.exe",
+        "tools/chocolateyInstall/redirects/clist.exe.ignore",
+        "tools/chocolateyInstall/redirects/cpack.exe",
+        "tools/chocolateyInstall/redirects/cpack.exe.ignore",
+        "tools/chocolateyInstall/redirects/cpush.exe",
+        "tools/chocolateyInstall/redirects/cpush.exe.ignore",
+        "tools/chocolateyInstall/redirects/cuninst.exe",
+        "tools/chocolateyInstall/redirects/cuninst.exe.ignore",
+        "tools/chocolateyInstall/redirects/cup.exe",
+        "tools/chocolateyInstall/redirects/cup.exe.ignore",
+        "tools/chocolateyInstall/redirects/cver.exe",
+        "tools/chocolateyInstall/redirects/cver.exe.ignore",
+        "tools/chocolateyInstall/tools/7z.dll",
+        "tools/chocolateyInstall/tools/7z.dll.manifest",
+        "tools/chocolateyInstall/tools/7z.exe",
+        "tools/chocolateyInstall/tools/7z.exe.ignore",
+        "tools/chocolateyInstall/tools/7z.exe.manifest",
+        "tools/chocolateyInstall/tools/7zip.license.txt",
+        "tools/chocolateyInstall/tools/checksum.exe",
+        "tools/chocolateyInstall/tools/checksum.exe.config",
+        "tools/chocolateyInstall/tools/checksum.exe.ignore",
+        "tools/chocolateyInstall/tools/checksum.license.txt",
+        "tools/chocolateyInstall/tools/shimgen.exe",
+        "tools/chocolateyInstall/tools/shimgen.exe.ignore",
+        "tools/chocolateyInstall/tools/shimgen.license.txt",
+        "tools/chocolateysetup.psm1",
+        "tools/init.ps1"
+      ]
+    },
+    "chocolatey.lib/0.10.15": {
+      "sha512": "93fILlJ0+UsqjhL426vO0HItR49+NYSdneMQ/+e6VtSRTDK4xdfXmKTls1d21glGicRVv4VTijT5Rtkw2PN6yg==",
+      "type": "package",
+      "path": "chocolatey.lib/0.10.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "chocolatey.lib.0.10.15.nupkg.sha512",
+        "chocolatey.lib.nuspec",
+        "lib/CREDITS.txt",
+        "lib/chocolatey.dll",
+        "lib/chocolatey.pdb",
+        "lib/chocolatey.xml"
+      ]
+    },
+    "instchoco/2.11.0": {
+      "sha512": "DBBoOo9Dlt5uT+zMjZs+/WNlfTQlJpvVHss3DUD27dajWg6V95OjX9bWvmtAke8pmQgl18BIT0a4PlA/Qwd5wg==",
+      "type": "package",
+      "path": "instchoco/2.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "InstChoco.exe",
+        "LICENSE.txt",
+        "instchoco.2.11.0.nupkg.sha512",
+        "instchoco.nuspec"
+      ]
+    },
+    "log4net/2.0.3": {
+      "sha512": "rxMHzK5efGPo5XtRnuUGO4tfW5l74Aji6kVmtMAt2SgcB5PHBNtNY7yj2LCI2VtKrLPO7kCKR6kH6lIZggq3Gg==",
+      "type": "package",
+      "path": "log4net/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net10-full/log4net.dll",
+        "lib/net10-full/log4net.xml",
+        "lib/net11-full/log4net.dll",
+        "lib/net11-full/log4net.xml",
+        "lib/net20-full/log4net.dll",
+        "lib/net20-full/log4net.xml",
+        "lib/net35-client/log4net.dll",
+        "lib/net35-client/log4net.xml",
+        "lib/net35-full/log4net.dll",
+        "lib/net35-full/log4net.xml",
+        "lib/net40-client/log4net.dll",
+        "lib/net40-client/log4net.xml",
+        "lib/net40-full/log4net.dll",
+        "lib/net40-full/log4net.xml",
+        "log4net.2.0.3.nupkg.sha512",
+        "log4net.nuspec"
+      ]
+    },
+    "NLog/4.7.10": {
+      "sha512": "rcegW7kYOCjl7wX0SzsqpPBqnJ51JKi1WkYb6QBVX0Wc5IgH19Pv4t/co+T0s06OS0Ne44xgkY/mHg0PdrmJow==",
+      "type": "package",
+      "path": "nlog/4.7.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/NLog.dll",
+        "lib/monoandroid44/NLog.xml",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net40-client/NLog.dll",
+        "lib/net40-client/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "lib/sl4/NLog.dll",
+        "lib/sl4/NLog.xml",
+        "lib/sl5/NLog.dll",
+        "lib/sl5/NLog.xml",
+        "lib/wp8/NLog.dll",
+        "lib/wp8/NLog.xml",
+        "lib/xamarinios10/NLog.dll",
+        "lib/xamarinios10/NLog.xml",
+        "nlog.4.7.10.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "Cake.Chocolatey.Module >= 0.6.1",
+      "NLog >= 4.7.10",
+      "chocolatey >= 0.10.14",
+      "chocolatey.lib >= 0.10.15",
+      "instchoco >= 2.11.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\סארט\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\סארט\\source\\repos\\Upgrade All\\Upgrade All\\Upgrade All.csproj",
+      "projectName": "Upgrade All",
+      "projectPath": "C:\\Users\\סארט\\source\\repos\\Upgrade All\\Upgrade All\\Upgrade All.csproj",
+      "packagesPath": "C:\\Users\\סארט\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\סארט\\source\\repos\\Upgrade All\\Upgrade All\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\סארט\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\סארט\\source\\repos\\NetWork": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "Cake.Chocolatey.Module": {
+            "target": "Package",
+            "version": "[0.6.1, )"
+          },
+          "NLog": {
+            "target": "Package",
+            "version": "[4.7.10, )"
+          },
+          "chocolatey": {
+            "target": "Package",
+            "version": "[0.10.14, )"
+          },
+          "chocolatey.lib": {
+            "target": "Package",
+            "version": "[0.10.15, )"
+          },
+          "instchoco": {
+            "target": "Package",
+            "version": "[2.11.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'chocolatey.lib 0.10.15' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "chocolatey.lib",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'log4net 2.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "log4net",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+C:\Users\סארט\source\repos\Runas\Runas\bin\Debug\net5.0\Runas.exe
+C:\Users\סארט\source\repos\Runas\Runas\bin\Debug\net5.0\Runas.deps.json
+C:\Users\סארט\source\repos\Runas\Runas\bin\Debug\net5.0\Runas.runtimeconfig.json
+C:\Users\סארט\source\repos\Runas\Runas\bin\Debug\net5.0\Runas.runtimeconfig.dev.json
+C:\Users\סארט\source\repos\Runas\Runas\bin\Debug\net5.0\Runas.dll
+C:\Users\סארט\source\repos\Runas\Runas\bin\Debug\net5.0\ref\Runas.dll
+C:\Users\סארט\source\repos\Runas\Runas\bin\Debug\net5.0\Runas.pdb
+C:\Users\סארט\source\repos\Runas\Runas\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\סארט\source\repos\Runas\Runas\obj\Debug\net5.0\Runas.csproj.AssemblyReference.cache
+C:\Users\סארט\source\repos\Runas\Runas\obj\Debug\net5.0\Runas.Properties.Resources.resources
+C:\Users\סארט\source\repos\Runas\Runas\obj\Debug\net5.0\Runas.csproj.GenerateResource.cache
+C:\Users\סארט\source\repos\Runas\Runas\obj\Debug\net5.0\Runas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\סארט\source\repos\Runas\Runas\obj\Debug\net5.0\Runas.AssemblyInfoInputs.cache
+C:\Users\סארט\source\repos\Runas\Runas\obj\Debug\net5.0\Runas.AssemblyInfo.cs
+C:\Users\סארט\source\repos\Runas\Runas\obj\Debug\net5.0\Runas.csproj.CoreCompileInputs.cache
+C:\Users\סארט\source\repos\Runas\Runas\obj\Debug\net5.0\Runas.csproj.CopyComplete
+C:\Users\סארט\source\repos\Runas\Runas\obj\Debug\net5.0\Runas.dll
+C:\Users\סארט\source\repos\Runas\Runas\obj\Debug\net5.0\ref\Runas.dll
+C:\Users\סארט\source\repos\Runas\Runas\obj\Debug\net5.0\Runas.pdb
+C:\Users\סארט\source\repos\Runas\Runas\obj\Debug\net5.0\Runas.genruntimeconfig.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\bin\Debug\net5.0\Runas.exe
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\bin\Debug\net5.0\Runas.deps.json
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\bin\Debug\net5.0\Runas.runtimeconfig.json
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\bin\Debug\net5.0\Runas.runtimeconfig.dev.json
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\bin\Debug\net5.0\Runas.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\bin\Debug\net5.0\ref\Runas.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\bin\Debug\net5.0\Runas.pdb
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.csproj.AssemblyReference.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.GeneratedMSBuildEditorConfig.editorconfig
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.AssemblyInfoInputs.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.AssemblyInfo.cs
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.csproj.CoreCompileInputs.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.csproj.CopyComplete
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\ref\Runas.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.pdb
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.genruntimeconfig.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.Properties.Resources.resources
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.csproj.GenerateResource.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\bin\Debug\net5.0\Program.cs
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\bin\Debug\net5.0\Properties\Resources.Designer.cs

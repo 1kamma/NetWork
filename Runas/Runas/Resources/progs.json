@@ -1,0 +1,20 @@
+{
+    "AutoHotKey": [
+        "C:\\Program Files\\AutoHotkey\\AutoHotkey.exe",
+        "D:\\Drive\\טוויקים למחשב\\myscript 3.0\\myscript 2.0.ahk"
+    ],
+    "Lightshot": [
+        "C:\\Program Files (x86)\\Skillbrains\\lightshot\\Lightshot.exe"
+    ],
+    "AsusNbKeys": [
+        "C:\\Program Files (x86)\\ASUS\\ATK Package\\AsusNbKeys\\AsusNbKeys.exe",
+        "C:\\Program Files (x86)\\ASUS\\ATK Package\\ATK Hotkey\\AsusNbKeys.exe"
+    ],
+    "HControl": [
+        "C:\\Program Files (x86)\\ASUS\\ATK Package\\ATK Hotkey\\HControl.exe"
+    ],
+    "Ditto": [
+        "C:\\Program Files\\Ditto\\Ditto.exe"
+    ]
+
+}

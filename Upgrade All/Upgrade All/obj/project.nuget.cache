@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "dgSpecHash": "Hk8lWr5TqHSYkGf/sI6HXlW5wOjLcmmr1JQQumIxkYiR6be2dhZBDCoSvU4V44iMYFDObL97nvJPexYH5aHUeg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\סארט\\source\\repos\\Upgrade All\\Upgrade All\\Upgrade All.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\סארט\\.nuget\\packages\\cake.chocolatey.module\\0.6.1\\cake.chocolatey.module.0.6.1.nupkg.sha512",
+    "C:\\Users\\סארט\\.nuget\\packages\\chocolatey\\0.10.14\\chocolatey.0.10.14.nupkg.sha512",
+    "C:\\Users\\סארט\\.nuget\\packages\\chocolatey.lib\\0.10.15\\chocolatey.lib.0.10.15.nupkg.sha512",
+    "C:\\Users\\סארט\\.nuget\\packages\\instchoco\\2.11.0\\instchoco.2.11.0.nupkg.sha512",
+    "C:\\Users\\סארט\\.nuget\\packages\\log4net\\2.0.3\\log4net.2.0.3.nupkg.sha512",
+    "C:\\Users\\סארט\\.nuget\\packages\\nlog\\4.7.10\\nlog.4.7.10.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'chocolatey.lib 0.10.15' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "chocolatey.lib",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'log4net 2.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "log4net",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}
