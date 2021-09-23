@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32.TaskScheduler;
+using Microsoft.Win32.TaskScheduler;
 using Newtonsoft.Json.Linq;
 namespace Installizer
 {
@@ -14,6 +14,19 @@ namespace Installizer
             this.TaskPath = TaskPath;
             this.serv = new();
             this.taskDefinition = this.serv.NewTask();
+        }
+        public Tasker(string TaskName, string TaskPath, string description)
+        {
+            this.TaskName = TaskName;
+            this.TaskPath = TaskPath;
+            this.serv = new();
+            this.taskDefinition = this.serv.NewTask();
+            TaskDescribe(description);
+        }
+        public void TaskDescribe(string description)
+        {
+            this.taskDefinition.RegistrationInfo.Description = description;
+            this.taskDefinition.RegistrationInfo.Author = $"{System.Environment.MachineName}\\{System.Environment.UserName}";
         }
         public void TaskSettingsDefine(bool batteries = true, bool enable = true, bool startwhenavailibale = true, bool hidden = false)
         {
@@ -200,7 +213,6 @@ namespace Installizer
         //}
         public void RegisterTask()
         {
-            this.taskDefinition.RegistrationInfo.Description = "texutal ttext";
             try
             {
                 this.serv.RootFolder.RegisterTaskDefinition($"{this.TaskPath}\\{this.TaskName}", this.taskDefinition);
