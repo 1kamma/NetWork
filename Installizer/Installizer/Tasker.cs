@@ -2,7 +2,7 @@ using Microsoft.Win32.TaskScheduler;
 using Newtonsoft.Json.Linq;
 namespace Installizer
 {
-    class Tasker
+    public class Tasker
     {
         string TaskName;
         string TaskPath;
@@ -75,6 +75,13 @@ namespace Installizer
         private System.DateTime HourTime(string time)
         {
             return System.DateTime.Parse(time);
+        }
+        public void TaskEventTriggerDefine(string logName, string logSource, int eventID)
+        {
+            EventTrigger trigger = new EventTrigger();
+            trigger.Enabled = true;
+            trigger.SetBasic(logName, logSource, eventID);
+            this.taskDefinition.Triggers.Add(trigger);
         }
 
         public void TaskDailyTriggerrDefine(string hour)
@@ -226,6 +233,11 @@ namespace Installizer
 
             //serv.RootFolder.RegisterTaskDefinition(TaskPath);
         }
+        public static void ExportJson(string path, Tasker task)
+        {
+            var tas = Newtonsoft.Json.JsonConvert.SerializeObject(task, Newtonsoft.Json.Formatting.Indented);
+            System.IO.File.WriteAllText(path, tas);
+        }
         public void ExportJson()
         {
             JObject Task = new();
@@ -247,6 +259,13 @@ namespace Installizer
                 // TODO: continue
             }
             //Task.Add(new JProperty())
+        }
+        public static void ImportTasks(string jsonFile)
+        {
+
+            JObject SchedTask = (JObject)Newtonsoft.Json.JsonConvert.DeserializeObject(System.IO.File.ReadAllText(jsonFile));
+            Tasker tasker = new(SchedTask["TaskName"].ToString(), SchedTask["TaskPath"].ToString(), SchedTask["Description"].ToString());
+
         }
     }
 }

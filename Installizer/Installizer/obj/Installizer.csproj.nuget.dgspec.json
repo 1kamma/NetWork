@@ -60,6 +60,14 @@
               "target": "Package",
               "version": "[5.11.0, )"
             },
+            "SharpVectors": {
+              "target": "Package",
+              "version": "[1.7.6, )"
+            },
+            "System.Xml.ReaderWriter": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
             "TaskScheduler": {
               "target": "Package",
               "version": "[2.9.1, )"
@@ -84,6 +92,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"

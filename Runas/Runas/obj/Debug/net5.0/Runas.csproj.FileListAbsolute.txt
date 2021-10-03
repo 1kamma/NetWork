@@ -31,7 +31,6 @@ D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net
 D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.AssemblyInfoInputs.cache
 D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.AssemblyInfo.cs
 D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.csproj.CoreCompileInputs.cache
-D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.csproj.CopyComplete
 D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.dll
 D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\ref\Runas.dll
 D:\Drive\טוויקים למחשב\סקריפטוש\C#\Runas\Runas\obj\Debug\net5.0\Runas.pdb

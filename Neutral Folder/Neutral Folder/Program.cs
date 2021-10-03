@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace Neutral_Folder
 {
     class Program
@@ -11,11 +11,28 @@ namespace Neutral_Folder
         static void DeleteFolder(string name)
         {
             string path = json[name]["path"];
+
             System.IO.DirectoryInfo directory = new(path);
             try
             {
                 System.IO.FileStream fileStream = null;
                 directory.Delete(true);
+            }
+            catch (System.UnauthorizedAccessException)
+            {
+                string[] files = System.IO.Directory.GetFiles(path);
+                string[] dirs = System.IO.Directory.GetDirectories(path);
+                foreach (var file in files)
+                {
+                    System.IO.File.SetAttributes(file, System.IO.FileAttributes.Normal);
+                    System.IO.FileInfo fileInfo = new System.IO.FileInfo(file);
+                    System.IO.File.Delete(file);
+                }
+                foreach (var dir in dirs)
+                {
+
+                    System.IO.Directory.Delete(dir, true);
+                }
             }
             catch
             {
@@ -33,6 +50,7 @@ namespace Neutral_Folder
                 foreach (var file in System.IO.Directory.GetFiles(path))
                 {
                     System.IO.File.SetAttributes(file, System.IO.FileAttributes.Normal);
+
                     System.IO.File.Delete(file);
                 }
                 foreach (var folder in System.IO.Directory.GetDirectories(path))

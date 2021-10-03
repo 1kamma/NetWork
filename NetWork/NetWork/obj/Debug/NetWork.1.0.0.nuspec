@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>NetWork</id>
+    <version>1.0.0</version>
+    <authors>NetWork</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0-windows7.0">
+        <dependency id="AudioControl.x64" version="1.0.1" exclude="Build,Analyzers" />
+        <dependency id="AutoHotkey.Interop" version="1.0.0.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Management.Infrastructure" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.NETCore.Windows.ApiSets" version="1.0.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.NETCore.Windows.ApiSets-x64" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="NAudio" version="2.0.1" exclude="Build,Analyzers" />
+        <dependency id="NETStandard.Library" version="2.0.3" exclude="Build,Analyzers" />
+        <dependency id="NLog" version="4.7.10" exclude="Build,Analyzers" />
+        <dependency id="NLog.Extensions.Logging" version="1.7.3" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+        <dependency id="Serilog" version="2.10.0" exclude="Build,Analyzers" />
+        <dependency id="SimpleWifi.netstandard" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Management" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.ServiceProcess.ServiceController" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="VPNConnector" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\bin\Debug\net5.0-windows7.0\NetWork.runtimeconfig.json" target="lib\net5.0-windows7.0\NetWork.runtimeconfig.json" />
+    <file src="D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\bin\Debug\net5.0-windows7.0\NetWork.dll" target="lib\net5.0-windows7.0\NetWork.dll" />
+  </files>
+</package>

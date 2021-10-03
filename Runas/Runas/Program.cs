@@ -1,4 +1,3 @@
-﻿using System;
 using Newtonsoft.Json;
 using System.Diagnostics;
 namespace Runas
@@ -27,7 +26,7 @@ namespace Runas
                     foreach (var prog in jprograms[programName])
                     {
                         if (System.IO.File.Exists(prog.Value))
-                        { 
+                        {
                             Process.Start(prog.Value);
                         }
                     }
@@ -40,10 +39,10 @@ namespace Runas
         }
         static void Main(string[] args)
         {
-            foreach(var prog in jprograms)
+            foreach (var prog in jprograms)
             {
                 string ProgProg = ((Newtonsoft.Json.Linq.JProperty)prog).Name;
-                System.Threading.Thread thread = new (new System.Threading.ThreadStart(() => RunProcess(ProgProg)));
+                System.Threading.Thread thread = new(new System.Threading.ThreadStart(() => RunProcess(ProgProg)));
                 thread.Start();
             }
         }

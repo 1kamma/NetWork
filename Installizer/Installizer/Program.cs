@@ -1,4 +1,4 @@
-﻿namespace Installizer
+namespace Installizer
 {
     class Program
     {
@@ -85,10 +85,13 @@
             int[] i = new int[] { 1, 2 };
             tasker.TaskActionsDefine(@"C:\Program Files\PowerShell\7\pwsh.exe", null, null);
             tasker.TaskDailyTriggerrDefine("12:30");
-            //tasker.TaskSettingsDefine();
+            tasker.TaskSettingsDefine();
             tasker.TaskPrincipal(user: "Feanor\\סארט");
-            tasker.RegisterTask();
-            System.Console.WriteLine("now");
+            Tasker.ExportJson("D:\\Neutral Folder\\t.json", tasker);
+            //tasker.RegisterTask();
+            //System.Console.WriteLine("now");
+            //PropertiesHelpers.Winget winget = new();
+            //System.Console.WriteLine(winget.detect);
         }
     }
 }

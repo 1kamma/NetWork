@@ -15,6 +15,9 @@
     ],
     "Ditto": [
         "C:\\Program Files\\Ditto\\Ditto.exe"
-    ]
-
+    ],
+	"PowerToys":[
+	"C:\\Program Files\\PowerToys\\PowerToys.exe"
+	]
+	
 }
