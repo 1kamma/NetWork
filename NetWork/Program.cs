@@ -1,5 +1,6 @@
 using DotRas;
 using NAudio.CoreAudioApi;
+using Newtonsoft.Json.Linq;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,27 @@ namespace NetWork
 {
     class Program
     {
+        public static bool Earphones()
+        {
+            string data = System.IO.File.ReadAllText($"{AppDomain.CurrentDomain.BaseDirectory}\\Other\\earphones.json");
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+            dynamic array = (JArray)Newtonsoft.Json.JsonConvert.DeserializeObject(data, typeof(JArray));
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+            var device = new MMDeviceEnumerator();
+            var Devices = device.EnumerateAudioEndPoints(DataFlow.Render, DeviceState.Active);
+            foreach (var Device in Devices)
+            {
+                foreach (string ob in array)
+                {
+                    if (Device.FriendlyName.Contains(ob))
+                    {
+                        return true;
+                    }
+
+                }
+            }
+            return false;
+        }
         public static Logger StartLogger()
         {
             var config = new NLog.Config.LoggingConfiguration();
@@ -127,7 +149,6 @@ namespace NetWork
                      .Where(x => x.ProcessName.StartsWith("surf", StringComparison.OrdinalIgnoreCase))
                      .ToList()
                      .ForEach(x => x.Kill());
-
 
         }
         public static void StopProgram(string[] Name, bool mute = true)
@@ -417,63 +438,12 @@ namespace NetWork
                         }
                         break;
                 }
-                //try
-                //{
-                //    System.Net.NetworkInformation.Ping p = new();
-                //    System.Net.NetworkInformation.PingReply png = p.Send("google.com", 3000);
-                //    if (png.Status != System.Net.NetworkInformation.IPStatus.Success)
-                //    {
-                //        string[] stp = programs_to_stop;
-                //        programs_to_stop = new string[stp.Length + 1];
-                //        for (int i = 0; i < stp.Length; i++)
-                //        {
-                //            programs_to_stop[i] = stp[i];
-                //        }
-                //        programs_to_stop[stp.Length] = "Surfshark";
-                //        foreach (var serv in System.ServiceProcess.ServiceController.GetServices())
-                //        {
-                //            if (serv.ServiceName.Contains("Surf"))
-                //            {
-                //                serv.Stop();
-                //            }
-                //        }
-                //        //programs_to_stop.Append("Surfshark");
-                //    }
-
-                //}
-                //catch
-                //{
-                //    string[] stp = programs_to_stop;
-                //    programs_to_stop = new string[stp.Length + 1];
-                //    for (int i = 0; i < stp.Length; i++)
-                //    {
-                //        programs_to_stop[i] = stp[i];
-                //    }
-                //    foreach (var serv in System.ServiceProcess.ServiceController.GetServices())
-                //    {
-                //        if (serv.ServiceName.Contains("Surf"))
-                //        {
-                //            try
-                //            {
-                //            serv.Stop();
-
-                //            }
-                //            catch
-                //            {
-
-                //            }
-                //        }
-                //    }
-                //    programs_to_stop[stp.Length] = "Surfshark";
-
-                //}
-                foreach (var serv in System.ServiceProcess.ServiceController.GetServices())
+                if (Earphones())
                 {
-                    if (serv.ServiceName.Contains("Surf"))
-                    {
-                        serv.Stop();
-                    }
+                    mute = false;
                 }
+
+
                 if (programs_to_run is not null)
                 {
                     StartProgram(programs_to_run, mute);

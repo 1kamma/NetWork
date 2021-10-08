@@ -48,13 +48,10 @@
               "target": "Package",
               "version": "[1.0.1, )"
             },
-<<<<<<< HEAD:NetWork/NetWork/obj/NetWork.csproj.nuget.dgspec.json
             "AutoHotkey.Interop": {
               "target": "Package",
               "version": "[1.0.0.1, )"
             },
-=======
->>>>>>> 568f2acd632b2bee3878b95bf3d3bb7ef00a403c:NetWork/obj/NetWork.csproj.nuget.dgspec.json
             "Microsoft.Management.Infrastructure": {
               "target": "Package",
               "version": "[2.0.0, )"
@@ -83,6 +80,10 @@
               "target": "Package",
               "version": "[1.7.3, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Serilog": {
               "target": "Package",
               "version": "[2.10.0, )"
@@ -95,13 +96,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
-<<<<<<< HEAD:NetWork/NetWork/obj/NetWork.csproj.nuget.dgspec.json
             "System.ServiceProcess.ServiceController": {
               "target": "Package",
               "version": "[5.0.0, )"
             },
-=======
->>>>>>> 568f2acd632b2bee3878b95bf3d3bb7ef00a403c:NetWork/obj/NetWork.csproj.nuget.dgspec.json
             "VPNConnector": {
               "target": "Package",
               "version": "[1.0.0, )"

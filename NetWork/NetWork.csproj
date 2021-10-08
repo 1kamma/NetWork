@@ -23,17 +23,21 @@
     </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AudioControl.x64" Version="1.0.1" />
+    <PackageReference Include="AutoHotkey.Interop" Version="1.0.0.1" />
     <PackageReference Include="Microsoft.Management.Infrastructure" Version="2.0.0" />
     <PackageReference Include="Microsoft.NETCore.Windows.ApiSets" Version="1.0.1" />
     <PackageReference Include="Microsoft.NETCore.Windows.ApiSets-x64" Version="1.0.0" />
     <PackageReference Include="NAudio" Version="2.0.1" />
     <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="NLog" Version="4.7.10" />
     <PackageReference Include="NLog.Extensions.Logging" Version="1.7.3" />
     <PackageReference Include="Serilog" Version="2.10.0" />
     <PackageReference Include="SimpleWifi.netstandard" Version="2.0.0" />
     <PackageReference Include="System.Management" Version="5.0.0" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="5.0.0" />
     <PackageReference Include="VPNConnector" Version="1.0.0" />
+
   </ItemGroup>
 
   <ItemGroup>
@@ -54,19 +58,27 @@
   <ItemGroup>
     <None Remove="C:\Users\סארט\.nuget\packages\audiocontrol.x64\1.0.1\build\\..\AudioControlNative.dll" />
     <None Remove="Other\ek.pbk" />
+
     <None Remove="Other\Windows.Common.dll" />
     <None Remove="Other\Windows.Common.pdb" />
   </ItemGroup>
 
   <ItemGroup>
+
     <EmbeddedResource Include="Other\ek.pbk" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Other\Windows.Common.dll" />
     <EmbeddedResource Include="Other\Windows.Common.pdb" />
+      <EmbeddedResource Include="Other\earphones.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
   </ItemGroup>
 
+    <ItemGroup>
+        <Resource Include="Other\*" />
+    </ItemGroup>
   <ItemGroup>
     <Resource Include="D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\bin\Debug\net5.0-windows7.0\AudioControlNative.dll" />
   </ItemGroup>

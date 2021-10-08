@@ -434,3 +434,8 @@ D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\bin\Debug
 D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Debug\net5.0-windows7.0\NetWork.Properties.Resources.resources
 D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Debug\net5.0-windows7.0\NetWork.csproj.GenerateResource.cache
 D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\obj\Debug\net5.0-windows7.0\NetWork.csproj.AssemblyReference.cache
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\bin\Debug\net5.0-windows7.0\AutoHotkey.Interop.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\bin\Debug\net5.0-windows7.0\System.ServiceProcess.ServiceController.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\bin\Debug\net5.0-windows7.0\runtimes\win\lib\netstandard2.0\System.ServiceProcess.ServiceController.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\bin\Debug\net5.0-windows7.0\Newtonsoft.Json.dll
+D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\bin\Debug\net5.0-windows7.0\Other\earphones.json

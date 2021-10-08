@@ -7,5 +7,6 @@
     "\\Windows.Common\\Properties",
     "\\Windows.Common\\Wifi"
   ],
+  "SelectedNode": "\\Windows.Common\\Wifi\\Interop.cs",
   "PreviewInSolutionExplorer": false
 }

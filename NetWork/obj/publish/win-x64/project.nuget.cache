@@ -1,15 +1,10 @@
 {
   "version": 2,
-<<<<<<< HEAD:NetWork/NetWork/obj/project.nuget.cache
-  "dgSpecHash": "skcxFjD2eHk0qQQqgE5QH/IOZNA+5BU5TIGcoX2lHDNCFmfxwQooUwg3WWRTK9jEyDwGMZj9uS4KuLwExgdqTA==",
-=======
   "dgSpecHash": "kpzjsCozReCOD+ZITrOvC6GvutUpujiGjqYov+WgbvL5uCqlnnt51gbxNhJKVI4zMQjcOZenB5CVDPxpa14oIA==",
->>>>>>> 568f2acd632b2bee3878b95bf3d3bb7ef00a403c:NetWork/obj/publish/win-x64/project.nuget.cache
   "success": true,
   "projectFilePath": "D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\NetWork.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\סארט\\.nuget\\packages\\audiocontrol.x64\\1.0.1\\audiocontrol.x64.1.0.1.nupkg.sha512",
-    "C:\\Users\\סארט\\.nuget\\packages\\autohotkey.interop\\1.0.0.1\\autohotkey.interop.1.0.0.1.nupkg.sha512",
     "C:\\Users\\סארט\\.nuget\\packages\\dotras.for.win8\\1.3.0\\dotras.for.win8.1.3.0.nupkg.sha512",
     "C:\\Users\\סארט\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\סארט\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
@@ -38,32 +33,15 @@
     "C:\\Users\\סארט\\.nuget\\packages\\serilog\\2.10.0\\serilog.2.10.0.nupkg.sha512",
     "C:\\Users\\סארט\\.nuget\\packages\\simplewifi.netstandard\\2.0.0\\simplewifi.netstandard.2.0.0.nupkg.sha512",
     "C:\\Users\\סארט\\.nuget\\packages\\system.codedom\\5.0.0\\system.codedom.5.0.0.nupkg.sha512",
-    "C:\\Users\\סארט\\.nuget\\packages\\system.diagnostics.eventlog\\5.0.0\\system.diagnostics.eventlog.5.0.0.nupkg.sha512",
     "C:\\Users\\סארט\\.nuget\\packages\\system.management\\5.0.0\\system.management.5.0.0.nupkg.sha512",
     "C:\\Users\\סארט\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\סארט\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
-<<<<<<< HEAD:NetWork/NetWork/obj/project.nuget.cache
-    "C:\\Users\\סארט\\.nuget\\packages\\system.serviceprocess.servicecontroller\\5.0.0\\system.serviceprocess.servicecontroller.5.0.0.nupkg.sha512",
-    "C:\\Users\\סארט\\.nuget\\packages\\vpnconnector\\1.0.0\\vpnconnector.1.0.0.nupkg.sha512",
-    "C:\\Users\\סארט\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.8\\microsoft.netcore.app.host.win-x64.5.0.8.nupkg.sha512"
-=======
     "C:\\Users\\סארט\\.nuget\\packages\\vpnconnector\\1.0.0\\vpnconnector.1.0.0.nupkg.sha512",
     "C:\\Users\\סארט\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\5.0.8\\microsoft.netcore.app.runtime.win-x64.5.0.8.nupkg.sha512",
     "C:\\Users\\סארט\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\5.0.8\\microsoft.windowsdesktop.app.runtime.win-x64.5.0.8.nupkg.sha512",
     "C:\\Users\\סארט\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\5.0.8\\microsoft.aspnetcore.app.runtime.win-x64.5.0.8.nupkg.sha512"
->>>>>>> 568f2acd632b2bee3878b95bf3d3bb7ef00a403c:NetWork/obj/publish/win-x64/project.nuget.cache
   ],
   "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'AutoHotkey.Interop 1.0.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "AutoHotkey.Interop",
-      "targetGraphs": [
-        "net5.0-windows7.0"
-      ]
-    },
     {
       "code": "NU1701",
       "level": "Warning",
