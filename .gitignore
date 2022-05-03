@@ -3,3 +3,6 @@ desktop.ini
 */Debug/*
 *.dll
 *.pbk
+.vs/
+*/obj/*
+*/desktop.ini

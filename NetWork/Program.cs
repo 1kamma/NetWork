@@ -1,4 +1,6 @@
+using System.IO;
 using DotRas;
+using Microsoft.Win32.TaskScheduler;
 using NAudio.CoreAudioApi;
 using Newtonsoft.Json.Linq;
 using NLog;
@@ -6,11 +8,18 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.ServiceProcess;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace NetWork {
     class Program {
+        /// <summary>
+        /// this function gets an array of service names, and start or stop command, and it runs on the array and
+        /// </summary>
+        /// <param name="service"></param>
+        /// <param name="stop"></param>
         public static void Servicer(string[] service, bool stop = true) {
             foreach (string s in service) {
                 Servicer(s, stop);
@@ -81,8 +90,8 @@ namespace NetWork {
         /// String of paths
         /// </summary>
         public static string[] StringsOfPaths = System.IO.Directory.GetFiles(@"C:\Program Files\Google\Drive File Stream\", "GoogleDriveFS.exe", System.IO.SearchOption.AllDirectories);
-        public static Dictionary<string, string> progs = new() { { "GoogleDriveFS", StringsOfPaths[^1] }, { "qbittorrent", @"C:\Program Files\qBittorrent\qbittorrent.exe" }, { "Surfshark", @"C:\Program Files (x86)\Surfshark\Surfshark.exe" }, { "cmd", @"C:\Windows\System32\cmd.exe" } };
-        public static Dictionary<string, string> paths = new() { { StringsOfPaths[^1], "GoogleDriveFS.exe" }, { @"C:\Program Files\qBittorrent\qbittorrent.exe", "qbittorrent.exe" }, { @"C:\Program Files (x86)\Surfshark\Surfshark.exe", "Surfshark" }, { @"C:\Windows\System32\cmd.exe", "cmd" } };
+        public static Dictionary<string, string> progs = new() { { "GoogleDriveFS", StringsOfPaths[^1] }, { "qbittorrent", @"C:\Program Files\qBittorrent\qbittorrent.exe" }, { "Surfshark", @"C:\Program Files (x86)\Surfshark\Surfshark.exe" }, { "cmd", @"C:\Windows\System32\cmd.exe" }, { "teamviewer", @"C:\Program Files (x86)\TeamViewer\TeamViewer.exe" }, { "tv", @"C:\Program Files (x86)\TeamViewer\TeamViewer_Service.exe" } };
+        public static Dictionary<string, string> paths = new() { { StringsOfPaths[^1], "GoogleDriveFS.exe" }, { @"C:\Program Files\qBittorrent\qbittorrent.exe", "qbittorrent.exe" }, { @"C:\Program Files (x86)\Surfshark\Surfshark.exe", "Surfshark" }, { @"C:\Windows\System32\cmd.exe", "cmd" }, { @"C:\Program Files (x86)\TeamViewer\TeamViewer.exe", "teamviewer" }, { @"C:\Program Files (x86)\TeamViewer\TeamViewer_Service.exe", "tv" } };
         //public static string[,] progs = new string[2,5] { { "GoogleDriveFS.exe", "googledrivesync.exe", "qbittorrent.exe", "Surfshark.exe", "mstsc.exe" },{ StringsOfPaths[StringsOfPaths.Length-1], "C:\\Program Files\\Google\\Drive\\googledrivesync.exe", "C:\\Program Files\\qBittorrent\\qbittorrent.exe", "C:\\Program Files (x86)\\Surfshark\\Surfshark.exe" , "mstsc.exe" } };
         /// <summary>
         /// This Function Stops the RDP connection to the office computer. it takes 'stop' parameter. if it is true, it stops the rdp. otherwise, it starts it.
@@ -131,7 +140,7 @@ namespace NetWork {
             if (connect) {
                 RasDialer rasDialer = new();
                 rasDialer.AllowUseStoredCredentials = true;
-                rasDialer.PhoneBookPath = @"D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\Other\ek.pbk";
+                rasDialer.PhoneBookPath = @"Other\ek.pbk";
                 rasDialer.PhoneNumber = "ek";
                 rasDialer.EntryName = "ek";
                 rasDialer.DialAsync();
@@ -191,6 +200,8 @@ namespace NetWork {
             MuteSystem(mute);
         }
         public static void StartProgram(string[] Name, bool mute = false) {
+            Thread trd;
+
             foreach (var process_name in Name) {
                 if (process_name.Contains("rdp") || process_name.Contains("mstsc")) {
                     StopRDP(false);
@@ -204,7 +215,9 @@ namespace NetWork {
                     } else {
                         process = @"C:\Windows\System32\rundll32.exe";
                     }
-                    Process.Start(process);
+                    trd = new(new ThreadStart(() => Process.Start(process)));
+                    trd.Start();
+                    ;
                 }
             }
             MuteSystem(mute);
@@ -229,7 +242,7 @@ namespace NetWork {
             return goodWifi;
         }
         static bool LanEthernet(System.Net.NetworkInformation.NetworkInterface networkAdapter) {
-            if (networkAdapter.Name.Contains("Ethernet") || (networkAdapter.NetworkInterfaceType.ToString().Contains("Ethernet"))) {
+            if ((networkAdapter.Name.Contains("Ethernet") || (networkAdapter.NetworkInterfaceType.ToString().Contains("Ethernet"))) && (networkAdapter.OperationalStatus == OperationalStatus.Up)) {
                 return true;
             }
             return false;
@@ -340,37 +353,42 @@ namespace NetWork {
             mMDeviceEnumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia).AudioEndpointVolume.Mute = mute;
         }
         public static void DoTheSchtik(bool Run) {
+            //using StreamReader read = File.ReadAllText("Other/def.json");
+            //var networkAutomation = JObject()
             if (Run) {
                 var network_connection = GetNetwork();
                 string[] programs_to_run;
                 string[] programs_to_stop;
-                string[] services_to_stop = new string[] { };
-                string[] services_to_start = new string[] { };
+                string[]? services_to_stop;
+                string[]? services_to_start;
                 bool mute;
                 switch (HirarcyNetworks(network_connection)) {
                     case "vpn":
                         programs_to_run = new string[] { "GoogleDriveFS", "qbittorrent", "Surfshark" };
-                        programs_to_stop = new string[] { "rdp" };
+                        programs_to_stop = new string[] { "rdp", "tv", "teamviewer" };
                         services_to_start = new string[] { "Surf" };
+                        services_to_stop = new string[] { "teamviewer" };
                         mute = false;
                         break;
                     case "ek":
                         programs_to_run = new string[] { "rdp", "GoogleDriveFS" };
                         programs_to_stop = new string[] { "qbittorrent", "Surfshark" };
                         services_to_stop = new string[] { "Surf" };
+                        services_to_start = null;
                         mute = false;
                         break;
                     case "good_lan":
                         programs_to_run = new string[] { "GoogleDriveFS", "qbittorrent", "Surfshark" };
                         services_to_start = new string[] { "Surf" };
                         programs_to_stop = new string[] { "rdp" };
+                        services_to_stop = null;
                         mute = false;
                         break;
                     case "lan":
                         programs_to_run = new string[] { "rdp", "GoogleDriveFS" };
                         programs_to_stop = new string[] { "qbittorrent", "Surfshark" };
                         services_to_stop = new string[] { "Surf" };
-
+                        services_to_start = null;
                         mute = false;
                         Dial(true);
                         break;
@@ -379,13 +397,14 @@ namespace NetWork {
                             programs_to_run = new string[] { "GoogleDriveFS", "qbittorrent", "Surfshark" };
                             services_to_start = new string[] { "Surf" };
                             programs_to_stop = new string[] { "rdp" };
+                            services_to_stop = null;
                             mute = false;
                             break;
                         } else {
                             programs_to_run = new string[] { "GoogleDriveFS" };
                             programs_to_stop = new string[] { "qbittorrent", "Surfshark", "rdp" };
                             services_to_stop = new string[] { "Surf" };
-
+                            services_to_start = null;
                             mute = true;
                         }
                         break;
@@ -403,17 +422,23 @@ namespace NetWork {
                     StopProgram(programs_to_stop, mute);
                     MuteSystem(mute);
                 }
-                if (services_to_start.Length > 0) {
+
+                if (services_to_start is not null) {
                     Servicer(services_to_start, false);
                 }
-                if (services_to_stop.Length > 0) {
+                if (services_to_stop is not null) {
                     Servicer(services_to_stop);
                 }
             }
+            StartTask();
             System.Windows.Forms.Application.Exit();
         }
+        private static void StartTask() {
+            TaskService task = new();
+            task.FindTask("StartUp and Run").Run();
+        }
         public static bool IniData() {
-            return System.IO.File.ReadAllText("D:\\Drive\\טוויקים למחשב\\סקריפטוש\\C#\\NetWork\\NetWork\\Other\\Data.ini").Equals("RunNetwork");
+            return System.IO.File.ReadAllText("Other\\Data.ini").Equals("RunNetwork");
         }
         static void Main(string[] args) {
             logger.Debug("me");

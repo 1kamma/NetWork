@@ -7,6 +7,7 @@
     <StartupObject>NetWork.Program</StartupObject>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Nullable>enable</Nullable>
+    <StartWorkingDirectory>.</StartWorkingDirectory>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -37,6 +38,7 @@
     <PackageReference Include="System.Management" Version="5.0.0" />
     <PackageReference Include="System.ServiceProcess.ServiceController" Version="5.0.0" />
     <PackageReference Include="VPNConnector" Version="1.0.0" />
+      <PackageReference Include="TaskScheduler" Version="2.9.2" />
 
   </ItemGroup>
 
@@ -56,7 +58,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="C:\Users\סארט\.nuget\packages\audiocontrol.x64\1.0.1\build\\..\AudioControlNative.dll" />
     <None Remove="Other\ek.pbk" />
 
     <None Remove="Other\Windows.Common.dll" />

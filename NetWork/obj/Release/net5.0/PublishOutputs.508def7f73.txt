@@ -1,6 +1,0 @@
-D:\Neutral Folder\NetWork.exe
-D:\Neutral Folder\NetWork.dll
-D:\Neutral Folder\NetWork.deps.json
-D:\Neutral Folder\NetWork.runtimeconfig.json
-D:\Neutral Folder\NetWork.pdb
-D:\Neutral Folder\Microsoft.Extensions.FileSystemGlobbing.dll
