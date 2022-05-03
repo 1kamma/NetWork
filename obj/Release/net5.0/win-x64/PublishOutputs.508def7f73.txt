@@ -1,6 +1,0 @@
-D:\Neutral Folder\NetWork.pdb
-D:\Neutral Folder\clrcompression.dll
-D:\Neutral Folder\clrjit.dll
-D:\Neutral Folder\coreclr.dll
-D:\Neutral Folder\mscordaccore.dll
-D:\Neutral Folder\NetWork.exe

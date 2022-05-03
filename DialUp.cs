@@ -1,8 +1,0 @@
-
-namespace NetWork
-{
-    class DialUp
-    {
-        
-    }
-}

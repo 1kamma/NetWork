@@ -1,0 +1,65 @@
+[
+    [{
+            "GoogleDriveFS": "rep",
+            "qbittorrent": "C:\\Program Files\\qBittorrent\\qbittorrent.exe",
+            "Surfshark": "C:\\Program Files (x86)\\Surfshark\\Surfshark.exe",
+            "cmd": "C:\\Windows\\System32\\cmd.exe",
+            "teamviewer": "C:\\Program Files (x86)\\TeamViewer\\TeamViewer.exe",
+            "tv": "C:\\Program Files (x86)\\TeamViewer\\TeamViewer_Service.exe"
+        }, {
+            "rep": "GoogleDriveFS.exe",
+            "C:\\Program Files\\qBittorrent\\qbittorrent.exe": "qbittorrent.exe",
+            "C:\\Program Files (x86)\\Surfshark\\Surfshark.exe": "Surfshark",
+            "C:\\Windows\\System32\\cmd.exe": "cmd",
+            "C:\\Program Files (x86)\\TeamViewer\\TeamViewer.exe": "teamviewer",
+            "C:\\Program Files (x86)\\TeamViewer\\TeamViewer_Service.exe": "tv"
+        }
+
+    ],
+    {
+        "vpn": {
+            "programs_to_run": ["GoogleDriveFS", "qbittorrent", "Surfshark"],
+            "programs_to_stop": ["rdp", "tv", "teamviewer"],
+            "services_to_stop": ["Surf"],
+            "services_to_start": ["teamviewer"],
+            "mute": false
+        },
+        "ek": {
+            "programs_to_run": ["rdp", "GoogleDriveFS"],
+            "programs_to_stop": ["qbittorrent", "Surfshrk"],
+            "services_to_stop": ["Surf"],
+            "services_to_start": [],
+            "mute": false
+        },
+        "good_lan": {
+            "programs_to_run": ["GoogleDriveFS", "qbittorrent", "Surfshark"],
+            "services_to_start": ["Surf"],
+            "services_to_stop": [],
+            "programs_to_stop": ["rdp"],
+            "mute": false
+        },
+        "lan": {
+            "programs_to_run": ["GoogleDriveFS", "rdp"],
+            "services_to_start": [],
+            "services_to_stop": ["Surf"],
+            "programs_to_stop": ["qbittorrent", "Surfshark"],
+            "mute": false,
+            "macs": ["00-E0-4C-68-13-F8"]
+        },
+        "good_wifi": {
+            "programs_to_run": ["GoogleDriveFS", "qbittorrent", "Surfshark"],
+            "services_to_start": ["Surf"],
+            "services_to_stop": [],
+            "programs_to_stop": ["rdp"],
+            "mute": false
+        },
+        "bad_wifi": {
+            "programs_to_run": ["GoogleDriveFS"],
+            "services_to_start": ["Surf"],
+            "services_to_stop": [],
+            "programs_to_stop": ["rdp", "qbittorrent", "Surfshark"],
+            "mute": true
+
+        }
+    }
+]

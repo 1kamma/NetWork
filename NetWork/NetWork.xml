@@ -4,6 +4,13 @@
         <name>NetWork</name>
     </assembly>
     <members>
+        <member name="M:NetWork.Program.Servicer(System.String[],System.Boolean)">
+            <summary>
+            this function gets an array of service names, and start or stop command, and it runs on the array and
+            </summary>
+            <param name="service"></param>
+            <param name="stop"></param>
+        </member>
         <member name="F:NetWork.Program.StringsOfPaths">
             <summary>
             String of paths
