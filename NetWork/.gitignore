@@ -1,0 +1,6 @@
+bin/
+net6.0*/
+Publish/
+NetWork/Publish/*/*
+*.exe
+NetWork/Properties/

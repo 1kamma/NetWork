@@ -2,31 +2,48 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <ApplicationIcon />
     <StartupObject>NetWork.Program</StartupObject>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Nullable>enable</Nullable>
+    
     <StartWorkingDirectory>.</StartWorkingDirectory>
+    
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+    
+    <UseWindowsForms>True</UseWindowsForms>
+    
+    <UseWPF>True</UseWPF>
+    
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    
+    <SignAssembly>False</SignAssembly>
+    
+    <FileVersion>1.0.0.1</FileVersion>
+    
+    <AssemblyVersion>0.1.1</AssemblyVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DebugType>embedded</DebugType>
+      <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <PlatformTarget>x64</PlatformTarget>
+    <Optimize>True</Optimize>
   </PropertyGroup>
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
         <DebugType>embedded</DebugType>
         <DebugSymbols>true</DebugSymbols>
         <PlatformTarget>x64</PlatformTarget>
         <DocumentationFile>.\NetWork.xml</DocumentationFile>
-        <OutputPath>.</OutputPath>
     </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AudioControl.x64" Version="1.0.1" />
     <PackageReference Include="AutoHotkey.Interop" Version="1.0.0.1" />
     <PackageReference Include="Microsoft.Management.Infrastructure" Version="2.0.0" />
-    <PackageReference Include="Microsoft.NETCore.Windows.ApiSets" Version="1.0.1" />
     <PackageReference Include="Microsoft.NETCore.Windows.ApiSets-x64" Version="1.0.0" />
     <PackageReference Include="NAudio" Version="2.0.1" />
     <PackageReference Include="NETStandard.Library" Version="2.0.3" />
@@ -34,11 +51,17 @@
     <PackageReference Include="NLog" Version="4.7.15" />
     <PackageReference Include="NLog.Extensions.Logging" Version="1.7.4" />
     <PackageReference Include="Serilog" Version="2.11.0" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.2.0" />
+    <PackageReference Include="Serilog.Enrichers.Process" Version="2.0.2" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="SimpleWifi.netstandard" Version="2.0.0" />
     <PackageReference Include="System.Management" Version="6.0.0" />
     <PackageReference Include="System.ServiceProcess.ServiceController" Version="6.0.0" />
+    <PackageReference Include="TaskScheduler" Version="2.10.1" />
     <PackageReference Include="VPNConnector" Version="1.0.0" />
-      <PackageReference Include="TaskScheduler" Version="2.10.1" />
 
   </ItemGroup>
 
@@ -58,10 +81,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Other\ek.pbk" />
-
-    <None Remove="Other\Windows.Common.dll" />
-    <None Remove="Other\Windows.Common.pdb" />
   </ItemGroup>
 
   <ItemGroup>
@@ -81,7 +100,13 @@
         <Resource Include="Other\*" />
     </ItemGroup>
   <ItemGroup>
-    <Resource Include="D:\Drive\טוויקים למחשב\סקריפטוש\C#\NetWork\NetWork\bin\Debug\net5.0-windows7.0\AudioControlNative.dll" />
+    <Resource Update="Other\Data.ini">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
-
+    <PropertyGroup>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+        <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
+    </PropertyGroup>
 </Project>
