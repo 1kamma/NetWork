@@ -3,7 +3,7 @@ using DotRas;
 using Microsoft.Win32.TaskScheduler;
 using NAudio.CoreAudioApi;
 using Newtonsoft.Json.Linq;
-using NLog;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,9 +12,14 @@ using System.Net.NetworkInformation;
 using System.ServiceProcess;
 using System.Text.RegularExpressions;
 using System.Threading;
+using Serilog.Core;
+using Serilog.Sinks.File;
+using Serilog.Events;
 
-namespace NetWork {
-    class Program {
+namespace NetWork
+{
+    class Program
+    {
         /// <summary>
         /// this function gets an array of service names, and start or stop command, and it runs on the array and
         /// </summary>
@@ -45,7 +50,8 @@ namespace NetWork {
                 foreach (var ser in Services) {
                     try {
                         ser.Stop();
-                    } catch {
+                    }
+                    catch {
                     }
                 }
             } else {
@@ -53,7 +59,8 @@ namespace NetWork {
                     try {
 
                         ser.Start();
-                    } catch {
+                    }
+                    catch {
 
                     }
 
@@ -68,7 +75,7 @@ namespace NetWork {
             var device = new MMDeviceEnumerator();
             var Devices = device.EnumerateAudioEndPoints(DataFlow.Render, DeviceState.Active);
             foreach (var Device in Devices) {
-                foreach (string ob in array) {
+                foreach (string ob in array!) {
                     if (Device.FriendlyName.Contains(ob)) {
                         return true;
                     }
@@ -77,15 +84,7 @@ namespace NetWork {
             }
             return false;
         }
-        public static Logger StartLogger() {
-            var config = new NLog.Config.LoggingConfiguration();
-            var logfile = new NLog.Targets.FileTarget("lgfle") { FileName = "logme.txt" };
-            config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
-            NLog.LogManager.Configuration = config;
-            NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
-            return logger;
-        }
-        public static Logger logger = StartLogger();
+
         /// <summary>
         /// String of paths
         /// </summary>
@@ -102,7 +101,10 @@ namespace NetWork {
             if (stop) {
                 Process[] ids = Process.GetProcessesByName("mstsc");
                 foreach (var id in ids) {
-                    logger.Debug(id.MainWindowTitle);
+                    //using (ILogger log=Logger)
+                    //{
+                    //    log.Debug(id.MainWindowTitle);
+                    //}
                     Regex rdp = new("(משרדוש.rdp|161.2)");
                     if (rdp.IsMatch(id.MainWindowTitle) || id.MainWindowTitle.Equals("חיבור לשולחן עבודה מרוחק")) {
                         id.Kill();
@@ -117,7 +119,7 @@ namespace NetWork {
                     bool started = false;
                     foreach (var id in ids) {
                         Regex rdp = new("(משרדוש.rdp|161.2)");
-                        logger.Debug(id.MainWindowTitle);
+
                         if (rdp.IsMatch(id.MainWindowTitle) || id.MainWindowTitle.Equals("חיבור לשולחן עבודה מרוחק")) {
                             started = true;
                         }
@@ -193,7 +195,8 @@ namespace NetWork {
                             StopRDP();
                         }
                     }
-                } catch {
+                }
+                catch {
                     continue;
                 }
             }
@@ -228,7 +231,8 @@ namespace NetWork {
             try {
                 wifiname = wlan.Interfaces[0].CurrentConnection.profileName;
 
-            } catch {
+            }
+            catch {
                 wifiname = "";
             }
             return wifiname;
@@ -253,7 +257,7 @@ namespace NetWork {
             }
             return false;
         }
-        static string GetLan(System.Net.NetworkInformation.NetworkInterface networkAdapter) {
+        static string? GetLan(System.Net.NetworkInformation.NetworkInterface networkAdapter) {
             if (LanEthernet(networkAdapter) && IgnoreLan(networkAdapter)) {
                 return networkAdapter.GetPhysicalAddress().ToString();
             }
@@ -288,7 +292,7 @@ namespace NetWork {
                 }
 
             }
-            net_dict.Add("Wi-Fi", IsItGoodWifi(getwifi));
+            net_dict.Add("Wi-Fi", IsItGoodWifi(getwifi)!);
             net_dict["good_lan"] = getgoodland;
             if (getlan.Length > 0) {
                 net_dict["lan"] = true;
@@ -310,10 +314,10 @@ namespace NetWork {
             return "Wi-Fi";
 
         }
-        public static bool AllowedMac(string mac, string[] those_are_the_AllowedMacs = null) {
+        public static bool AllowedMac(string mac, string?[] those_are_the_AllowedMacs = null) {
             string[] AllowedMac_adresses;
             if (!(those_are_the_AllowedMacs is null)) {
-                AllowedMac_adresses = those_are_the_AllowedMacs;
+                AllowedMac_adresses = those_are_the_AllowedMacs!;
             } else {
                 AllowedMac_adresses = new string[] { "00E04C6813E4" };
             }
@@ -325,7 +329,7 @@ namespace NetWork {
             return false;
 
         }
-        public static bool AllowedMac(string[] mac, string[] those_are_the_AllowedMacs = null) {
+        public static bool AllowedMac(string[] mac, string?[] those_are_the_AllowedMacs = null) {
             foreach (var single_mac in mac) {
                 if (AllowedMac(single_mac, those_are_the_AllowedMacs)) {
                     return true;
@@ -335,7 +339,7 @@ namespace NetWork {
         }
         public static void StartProgram(string process_name) {
             if (process_name.Contains("rdp") || process_name.Contains("mstsc")) {
-                Process.Start("mstsc.exe", @"D:\Drive\מסמכים\vms\משרדוש.rdp");
+                Process.Start("mstsc.exe", $"{Environment.ExpandEnvironmentVariables("%USERPROFILE%")}/Documents/משרדוש.rdp");
             } else if (Process.GetProcessesByName(process_name).Length < 1) {
                 string process;
                 if (progs.ContainsKey(process_name)) {
@@ -441,7 +445,10 @@ namespace NetWork {
             return System.IO.File.ReadAllText("Other\\Data.ini").Equals("RunNetwork");
         }
         static void Main(string[] args) {
-            logger.Debug("me");
+            Log.Logger = new LoggerConfiguration().WriteTo.File("Logs/NetworkLog.log", LogEventLevel.Debug,
+                "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz}[{Level: u3}] {Message:lj}{NewLine}",
+                rollingInterval: RollingInterval.Minute).CreateLogger();
+
             //IgnoreFile.M();
             DoTheSchtik(IniData());
 
